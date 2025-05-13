@@ -57,7 +57,7 @@ export default function Navbar() {
           >
             Home
           </Link>
-          <Link
+          {/* <Link
             href="/products"
             className={`text-sm font-medium transition-colors hover:text-accent ${
               pathname === '/products' ? 'text-accent' : 'text-foreground/80'
@@ -80,7 +80,7 @@ export default function Navbar() {
             }`}
           >
             Contact
-          </Link>
+          </Link> */}
         </nav>
 
         <div className="flex items-center space-x-2">

@@ -21,7 +21,7 @@ export default function ProductPage({ params }: { params: { id: string } }) {
           className="mb-6 flex items-center gap-2"
           asChild
         >
-          <a href="/products">
+          <a href="/home">
             <ArrowLeft size={16} />
             Back to products
           </a>
