@@ -5,7 +5,6 @@ import type React from "react"
 import { Search, ShoppingBag, X } from "lucide-react"
 import { useState, useEffect, useRef } from "react"
 import { motion } from "motion/react"
-import Link from "next/link"
 
 interface TopBarProps {
   cartItemCount: number
@@ -13,11 +12,8 @@ interface TopBarProps {
   onSearch: (query: string) => void
 }
 
-const categories = ["All", "Lighting", "Kitchenware", "Home Decor", "Plants", "Office", "Textiles"]
-
 export function TopBar({ cartItemCount, onCartClick, onSearch }: TopBarProps) {
   const [isSearchOpen, setIsSearchOpen] = useState(false)
-  const [selectedCategory, setSelectedCategory] = useState("All")
   const [isScrolled, setIsScrolled] = useState(false)
   const searchInputRef = useRef<HTMLInputElement>(null)
 

@@ -3,14 +3,17 @@ import { useState } from "react"
 import Image from "next/image"
 import { useCart } from "./CartContext"
 import type { Product } from "./data"
+import { Button } from "@/components/ui/button"
+import { Star, Truck } from "lucide-react"
 
 export default function ProductDetailClient({ product }: { product: Product }) {
   const { addToCart } = useCart()
   const [imgIdx, setImgIdx] = useState(0)
 
   return (
-    <div className="max-w-4xl mx-auto px-4 py-8 flex flex-col md:flex-row gap-8">
-      <div className="flex-1 flex flex-col items-center">
+    <div className="grid gap-8 md:grid-cols-2">
+      {/* Image Gallery */}
+      <div className="flex flex-col items-center">
         <div className="relative w-full aspect-[4/5] max-w-md rounded-lg overflow-hidden">
           <Image
             src={product.images[imgIdx]}
@@ -19,24 +22,6 @@ export default function ProductDetailClient({ product }: { product: Product }) {
             className="object-cover object-center"
             priority
           />
-          {product.images.length > 1 && (
-            <>
-              <button
-                onClick={() => setImgIdx((imgIdx - 1 + product.images.length) % product.images.length)}
-                className="absolute left-2 top-1/2 -translate-y-1/2 bg-white/70 dark:bg-black/50 p-2 rounded-full hover:bg-white/90 dark:hover:bg-black/70 z-10"
-                aria-label="Previous image"
-              >
-                <svg width="24" height="24" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M15 19l-7-7 7-7"/></svg>
-              </button>
-              <button
-                onClick={() => setImgIdx((imgIdx + 1) % product.images.length)}
-                className="absolute right-2 top-1/2 -translate-y-1/2 bg-white/70 dark:bg-black/50 p-2 rounded-full hover:bg-white/90 dark:hover:bg-black/70 z-10"
-                aria-label="Next image"
-              >
-                <svg width="24" height="24" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg>
-              </button>
-            </>
-          )}
         </div>
         <div className="flex gap-2 mt-3">
           {product.images.map((img, i) => (
@@ -46,16 +31,66 @@ export default function ProductDetailClient({ product }: { product: Product }) {
           ))}
         </div>
       </div>
-      <div className="flex-1 flex flex-col justify-center">
-        <h1 className="text-2xl font-bold mb-2">{product.name}</h1>
-        <p className="text-lg text-zinc-700 dark:text-zinc-300 mb-4 whitespace-pre-line">{product.description}</p>
-        <div className="text-xl font-semibold mb-6">${product.price}</div>
-        <button
-          onClick={() => addToCart(product)}
-          className="w-full py-3 bg-zinc-900 dark:bg-white text-white dark:text-zinc-900 text-base font-medium rounded-lg hover:bg-zinc-800 dark:hover:bg-zinc-100 transition-colors"
-        >
-          Add to Cart
-        </button>
+
+      {/* Product Info */}
+      <div className="md:py-8">
+        <div className="mb-2 md:mb-3">
+          <span className="mb-0.5 inline-block text-zinc-500 dark:text-zinc-400">
+            {product.category}
+          </span>
+          <h2 className="text-2xl font-bold text-zinc-800 dark:text-white lg:text-3xl">
+            {product.name}
+          </h2>
+        </div>
+
+        <div className="mb-6 flex items-center gap-3 md:mb-10">
+          <Button className="rounded-full gap-x-2">
+            <span className="text-sm">4.7</span>
+            <Star className="h-5 w-5" />
+          </Button>
+          <span className="text-sm text-zinc-500 dark:text-zinc-400 transition duration-100">
+            112 Ratings
+          </span>
+        </div>
+
+        <div className="mb-4">
+          <div className="flex items-end gap-2">
+            <span className="text-xl font-bold text-zinc-800 dark:text-white md:text-2xl">
+              ${product.price}
+            </span>
+            <span className="mb-0.5 text-red-500 line-through">
+              ${product.price + 30}
+            </span>
+          </div>
+          <span className="text-sm text-zinc-500 dark:text-zinc-400">
+            Incl. VAT plus shipping
+          </span>
+        </div>
+
+        <div className="mb-6 flex items-center gap-2 text-zinc-500 dark:text-zinc-400">
+          <Truck className="w-6 h-6" />
+          <span className="text-sm">2-4 Day Shipping</span>
+        </div>
+
+        <div className="flex gap-2.5">
+          <Button
+            onClick={() => addToCart(product)}
+            className="flex-1 bg-zinc-900 dark:bg-white text-white dark:text-zinc-900 hover:bg-zinc-800 dark:hover:bg-zinc-100"
+          >
+            Add to Cart
+          </Button>
+          <Button
+            variant="outline"
+            className="flex-1 border-zinc-900 dark:border-white text-zinc-900 dark:text-white"
+            // onClick={...} // Add checkout logic here
+          >
+            Checkout Now
+          </Button>
+        </div>
+
+        <p className="mt-12 text-base text-zinc-500 dark:text-zinc-300 tracking-wide whitespace-pre-line">
+          {product.description}
+        </p>
       </div>
     </div>
   )

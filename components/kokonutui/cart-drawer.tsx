@@ -2,8 +2,8 @@
 
 import { motion } from "motion/react"
 import { X } from "lucide-react"
-import type { CartItem } from "./data"
 import { useCart } from "./CartContext"
+import Image from "next/image"
 
 interface CartDrawerProps {
   onClose: () => void
@@ -39,7 +39,7 @@ export function CartDrawer({ onClose }: CartDrawerProps) {
           <div className="flex-1 overflow-y-auto p-4 space-y-4">
             {cart.map((item) => (
               <div key={item.id} className="flex gap-4 p-3 bg-zinc-50 dark:bg-zinc-800/50 rounded-lg">
-                <img src={item.images[0]} alt={item.name} className="w-24 h-24 object-cover rounded-md" />
+                <Image src={item.images[0]} alt={item.name} width={96} height={96} className="w-24 h-24 object-cover rounded-md" />
                 <div className="flex-1 min-w-0">
                   <div className="flex justify-between items-start">
                     <h3 className="text-base font-medium truncate">{item.name}</h3>

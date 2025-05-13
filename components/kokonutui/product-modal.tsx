@@ -4,6 +4,7 @@ import { motion } from "motion/react"
 import { X, ChevronLeft, ChevronRight } from "lucide-react"
 import { useState } from "react"
 import type { Product } from "./data"
+import Image from "next/image"
 
 interface ProductModalProps {
   product: Product
@@ -13,7 +14,6 @@ interface ProductModalProps {
 }
 
 export function ProductModal({ product, onClose, onAddToCart, goToProductPage }: ProductModalProps) {
-  const [quantity, setQuantity] = useState(1)
   const [imgIdx, setImgIdx] = useState(0)
   const totalImages = product.images.length
 
@@ -41,7 +41,7 @@ export function ProductModal({ product, onClose, onAddToCart, goToProductPage }:
       >
         <div className="h-full md:flex">
           <div className="relative md:w-2/5 flex items-center justify-center">
-            <img src={product.images[imgIdx]} alt={product.name} className="w-full h-[200px] md:h-full object-cover" />
+            <Image src={product.images[imgIdx]} alt={product.name} width={400} height={500} className="w-full h-[200px] md:h-full object-cover" />
             {totalImages > 1 && (
               <>
                 <button
@@ -67,7 +67,6 @@ export function ProductModal({ product, onClose, onAddToCart, goToProductPage }:
               <X className="w-4 h-4" />
             </button>
           </div>
-
           <div className="p-3 md:w-3/5 flex flex-col">
             <div className="flex-1">
               <div className="flex justify-between items-start mb-2">

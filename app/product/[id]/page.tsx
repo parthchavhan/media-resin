@@ -9,14 +9,12 @@ import { useState, use } from "react"
 import { ProductGrid } from "@/components/kokonutui/product-grid"
 
 export default function ProductDetail({ params }: { params: Promise<{ id: string }> }) {
+  const [isCartOpen, setIsCartOpen] = useState(false)
+  const { cart } = useCart()
   const { id } = use(params)
   const product = products.find((p) => p.id === id)
   if (!product) return notFound()
   const recentProducts = products.filter((p) => p.id !== product.id).slice(0, 4)
-
-  // Cart drawer state
-  const [isCartOpen, setIsCartOpen] = useState(false)
-  const { cart } = useCart()
 
   return (
     <div className="min-h-screen bg-zinc-50 dark:bg-zinc-950">
