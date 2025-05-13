@@ -55,7 +55,7 @@ export function CartDrawer({ onClose }: CartDrawerProps) {
                     <span className="text-sm text-zinc-500 dark:text-zinc-400">Qty: {item.quantity}</span>
                     <button onClick={() => updateQuantity(item.id, item.quantity + 1)} className="px-2 py-1 bg-zinc-200 dark:bg-zinc-700 rounded">+</button>
                   </div>
-                  <p className="text-base font-medium mt-1">${item.price * item.quantity}</p>
+                  <p className="text-base font-medium mt-1">₹{item.price * item.quantity}</p>
                 </div>
               </div>
             ))}
@@ -64,7 +64,7 @@ export function CartDrawer({ onClose }: CartDrawerProps) {
           <div className="p-4 border-t border-zinc-200 dark:border-zinc-800">
             <div className="flex justify-between mb-4">
               <span className="text-base">Total</span>
-              <span className="text-base font-medium">${total}</span>
+              <span className="text-base font-medium">₹{total}</span>
             </div>
             <button className="w-full py-3 bg-zinc-900 dark:bg-white text-white dark:text-zinc-900 text-base font-medium rounded-lg hover:bg-zinc-800 dark:hover:bg-zinc-100 transition-colors">
               Checkout

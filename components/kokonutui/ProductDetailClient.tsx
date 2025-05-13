@@ -6,7 +6,12 @@ import type { Product } from "./data"
 import { Button } from "@/components/ui/button"
 import { Star, Truck } from "lucide-react"
 
-export default function ProductDetailClient({ product }: { product: Product }) {
+interface ProductDetailClientProps {
+  product: Product
+  onAddToCart?: () => void
+}
+
+export default function ProductDetailClient({ product, onAddToCart }: ProductDetailClientProps) {
   const { addToCart } = useCart()
   const [imgIdx, setImgIdx] = useState(0)
 
@@ -56,10 +61,10 @@ export default function ProductDetailClient({ product }: { product: Product }) {
         <div className="mb-4">
           <div className="flex items-end gap-2">
             <span className="text-xl font-bold text-zinc-800 dark:text-white md:text-2xl">
-              ${product.price}
+              ₹{product.price}
             </span>
             <span className="mb-0.5 text-red-500 line-through">
-              ${product.price + 30}
+              ₹{product.price + 30}
             </span>
           </div>
           <span className="text-sm text-zinc-500 dark:text-zinc-400">
@@ -74,7 +79,7 @@ export default function ProductDetailClient({ product }: { product: Product }) {
 
         <div className="flex gap-2.5">
           <Button
-            onClick={() => addToCart(product)}
+            onClick={onAddToCart ? onAddToCart : () => addToCart(product)}
             className="flex-1 bg-zinc-900 dark:bg-white text-white dark:text-zinc-900 hover:bg-zinc-800 dark:hover:bg-zinc-100"
           >
             Add to Cart

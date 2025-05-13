@@ -7,14 +7,23 @@ import { CartDrawer } from "@/components/kokonutui/cart-drawer"
 import { useCart } from "@/components/kokonutui/CartContext"
 import { useState, use } from "react"
 import { ProductGrid } from "@/components/kokonutui/product-grid"
+import { ProductModal } from "@/components/kokonutui/product-modal"
+import type { Product } from "@/components/kokonutui/data"
 
 export default function ProductDetail({ params }: { params: Promise<{ id: string }> }) {
   const [isCartOpen, setIsCartOpen] = useState(false)
-  const { cart } = useCart()
+  const [selectedProduct, setSelectedProduct] = useState<Product | null>(null)
+  const { cart, addToCart } = useCart()
   const { id } = use(params)
   const product = products.find((p) => p.id === id)
   if (!product) return notFound()
-  const recentProducts = products.filter((p) => p.id !== product.id).slice(0, 4)
+  const recentProducts = products.filter((p) => p.id !== product.id).slice(0, 8)
+
+  // Handler for main product add to cart
+  const handleMainAddToCart = () => {
+    addToCart(product)
+    setIsCartOpen(true)
+  }
 
   return (
     <div className="min-h-screen bg-zinc-50 dark:bg-zinc-950">
@@ -25,11 +34,24 @@ export default function ProductDetail({ params }: { params: Promise<{ id: string
           <p className="text-zinc-600 dark:text-zinc-300 text-lg">Explore the details, browse images, and add this special item to your cart. Scroll down to see more beautiful creations!</p>
         </div>
         <div className="bg-white dark:bg-zinc-900 rounded-xl shadow-lg p-6 md:p-10 mb-10 flex flex-col md:flex-row gap-10">
-          <ProductDetailClient product={product} />
+          <ProductDetailClient product={product} onAddToCart={handleMainAddToCart} />
         </div>
         <h2 className="text-xl font-semibold mb-4 mt-8">Recent Products</h2>
-        <ProductGrid products={recentProducts} onProductSelect={() => {}} />
+        <ProductGrid products={recentProducts} onProductSelect={setSelectedProduct} />
       </div>
+      {selectedProduct && (
+        <ProductModal
+          product={selectedProduct}
+          onClose={() => setSelectedProduct(null)}
+          onAddToCart={(product) => {
+            addToCart(product)
+            setIsCartOpen(true)
+          }}
+          goToProductPage={() => {
+            if (selectedProduct) window.location.href = `/product/${selectedProduct.id}`
+          }}
+        />
+      )}
       {isCartOpen && <CartDrawer onClose={() => setIsCartOpen(false)} />}
     </div>
   )

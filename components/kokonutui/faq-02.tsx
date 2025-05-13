@@ -119,27 +119,37 @@ function FAQItem({ question, answer, index }: FAQItemProps) {
 function Faq02() {
   const faqs: Omit<FAQItemProps, "index">[] = [
     {
-      question: "What makes your platform unique?",
+      question: "What kind of resin products do you offer?",
       answer:
-        "Our platform stands out through its intuitive design, powerful automation capabilities, and seamless integration options. We&apos;ve focused on creating a user experience that combines simplicity with advanced features.",
+        "We specialize in handcrafted resin art including mantra frames, resin wall clocks, varmala keepsake frames, name plates, and more. Each piece is custom-made with attention to detail and a personal touch.",
     },
     {
-      question: "How does the pricing structure work?",
+      question: "Can I customize my order?",
       answer:
-        "We offer flexible, transparent pricing tiers designed to scale with your needs. Each tier includes a core set of features, with additional capabilities as you move up. All plans start with a 14-day free trial.",
+        "Absolutely! All our products are fully customizable. You can choose colors, text, photos, or even include special items like wedding varmala petals. Just reach out to us via WhatsApp to start the customization process.",
     },
     {
-      question: "What kind of support do you offer?",
+      question: "How do I place a custom order?",
       answer:
-        "We provide comprehensive support through multiple channels. This includes 24/7 live chat, detailed documentation, video tutorials, and dedicated account managers for enterprise clients.",
+        "To place a custom order, simply message us on WhatsApp. Share your ideas, preferences, and any reference images. We'll guide you through the design process and confirm all details before we begin crafting your unique piece.",
     },
     {
-      question: "How can I get started?",
+      question: "How long does it take to receive my order?",
       answer:
-        "You can get started by signing up for a free trial. Once you&apos;ve signed up, you&apos;ll have access to our platform&apos;s full range of features. You can also contact our support team for assistance.",
+        "Since each item is made to order, it typically takes 7–14 days to create and dispatch your piece. We'll keep you updated throughout the process, and shipping times may vary based on your location.",
+    },
+    {
+      question: "Do you ship across India?",
+      answer:
+        "Yes, we offer shipping across India. Once your order is ready, we’ll share the tracking details with you on WhatsApp. If you're outside India, please contact us to discuss international shipping options.",
+    },
+    {
+      question: "What if I have questions or need help with my order?",
+      answer:
+        "We're here to help! You can contact us anytime via WhatsApp for updates, questions, or assistance. We're committed to making sure your experience is smooth and personalized.",
     },
   ]
-
+  
   return (
     <section className="py-16 w-full bg-linear-to-b from-transparent via-gray-50/50 to-transparent dark:from-transparent dark:via-white/[0.02] dark:to-transparent">
       <div className="container px-4 mx-auto">

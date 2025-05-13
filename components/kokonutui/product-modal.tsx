@@ -74,7 +74,7 @@ export function ProductModal({ product, onClose, onAddToCart, goToProductPage }:
                   <h2 className="text-sm font-medium">{product.name}</h2>
                   <p className="text-xs text-zinc-500 dark:text-zinc-400">{product.category}</p>
                 </div>
-                <p className="text-sm font-medium">${product.price}</p>
+                <p className="text-sm font-medium">₹{product.price}</p>
               </div>
               <div className="space-y-2">
                 <p className="text-xs text-zinc-600 dark:text-zinc-300">{product.shortDescription}</p>
