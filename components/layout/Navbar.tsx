@@ -32,7 +32,7 @@ export default function Navbar() {
         "fixed top-0 w-full z-50 transition-all duration-300 shadow-lg",
         isScrolled 
           ? "bg-white/90 backdrop-blur-md text-gray-900" 
-          : "bg-gray-900 text-white"
+          : "bg-transparent text-yellow-900"
       )}
     >
       <div className="container mx-auto px-4">
@@ -41,9 +41,9 @@ export default function Navbar() {
             <Image 
               src="/logo-removebg-preview.png"
               alt="Media Resin Studio Logo"
-              width={70}
-              height={70}
-              className="mr-2"
+              width={80}
+              height={80}
+              className="mr-2 transition-transform duration-300 transform hover:scale-105"
             />
             {/* <span className="text-xl md:text-2xl font-bold">Media Resin Studio</span> */}
           </Link>
@@ -65,7 +65,7 @@ export default function Navbar() {
                   <Link
                     key={category.id}
                     href={`/categories/${category.id}`}
-                    className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100"
+                    className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100 transition-colors"
                   >
                     {category.name}
                   </Link>
