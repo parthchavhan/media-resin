@@ -25,7 +25,7 @@ const slides = [
   },
   {
     id: 3,
-    image: "https://images.pexels.com/photos/3246665/pexels-photo-3246665.jpeg",
+    image: "https://images.pexels.com/photos/3631430/pexels-photo-3631430.jpeg",
     title: "Art That Inspires",
     subtitle: "Limited edition prints that make a statement",
     cta: "View Prints",

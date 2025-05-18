@@ -31,7 +31,7 @@ export default function Navbar() {
         "fixed top-0 w-full z-50 transition-all duration-300",
         isScrolled 
           ? "bg-white/90 backdrop-blur-md shadow-sm text-gray-900" 
-          : "bg-transparent text-white"
+          : "bg-gray-900 text-white"
       )}
     >
       <div className="container mx-auto px-4">
@@ -52,7 +52,7 @@ export default function Navbar() {
               <button className="font-medium hover:text-primary transition-colors flex items-center gap-1">
                 Shop
               </button>
-              <div className="absolute left-0 mt-2 w-48 bg-white shadow-lg rounded-md overflow-hidden transform scale-95 opacity-0 group-hover:scale-100 group-hover:opacity-100 transition-all duration-200 origin-top-left z-50 invisible group-hover:visible">
+              <div className="absolute left-0 mt-2 w-48 bg-gray-400 shadow-lg rounded-md overflow-hidden transform scale-95 opacity-0 group-hover:scale-100 group-hover:opacity-100 transition-all duration-200 origin-top-left z-50 invisible group-hover:visible">
                 {categories.map(category => (
                   <Link
                     key={category.id}
@@ -105,7 +105,7 @@ export default function Navbar() {
 
       {/* Mobile Navigation */}
       {isMenuOpen && (
-        <div className="md:hidden bg-white text-gray-900">
+        <div className="md:hidden bg-white text-gray-900 shadow-lg">
           <div className="container mx-auto px-4 py-4">
             <nav className="flex flex-col space-y-4">
               <Link

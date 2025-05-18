@@ -32,21 +32,6 @@ export const products: Product[] = [
     inStock: true
   },
   {
-    id: "p3",
-    name: "Abstract Fluid Art Print",
-    description: "High-quality print of original fluid art painting. Vibrant colors flow together in this abstract design, adding a splash of creativity to any wall. Printed on premium archival paper for long-lasting beauty.",
-    price: 34.99,
-    images: [
-      "https://images.pexels.com/photos/3246665/pexels-photo-3246665.jpeg",
-      "https://images.pexels.com/photos/3130568/pexels-photo-3130568.jpeg"
-    ],
-    category: "Art Prints",
-    featured: true,
-    dimensions: "18\" x 24\"",
-    materials: ["Archival paper", "Archival inks"],
-    inStock: true
-  },
-  {
     id: "p4",
     name: "Resin River Serving Board",
     description: "Handcrafted wooden serving board with a stunning blue resin river flowing through the center. Perfect for entertaining or as a statement piece in your kitchen. Each board is unique with natural wood grain patterns.",
@@ -72,7 +57,7 @@ export const products: Product[] = [
       "/varmala3.jpg"
     ],
     category: "Keepsake",
-    featured: false,
+    featured: true,
     dimensions: "12\" x 20\"",
     materials: ["Reclaimed wood", "Epoxy resin", "Food-safe finish"],
     inStock: true
@@ -88,7 +73,7 @@ export const products: Product[] = [
       "/clock3.jpg"
     ],
     category: "Wall Art",
-    featured: false,
+    featured: true,
     dimensions: "12\" x 20\"",
     materials: ["Reclaimed wood", "Epoxy resin", "Food-safe finish"],
     inStock: true
@@ -104,7 +89,7 @@ export const products: Product[] = [
       "/navkar3.jpeg"
     ],
     category: "Spiritual Art",
-    featured: false,
+    featured: true,
     dimensions: "12\" x 20\"",
     materials: ["Reclaimed wood", "Epoxy resin", "Food-safe finish"],
     inStock: true
@@ -122,13 +107,13 @@ export const categories: Category[] = [
     id: "c2",
     name: "Home Decor",
     description: "Functional art pieces for your living space",
-    image: "https://images.pexels.com/photos/5232649/pexels-photo-5232649.jpeg"
+    image: "/clock1.jpg"
   },
   {
     id: "c3",
     name: "Art Prints",
     description: "Premium prints of original artwork",
-    image: "https://images.pexels.com/photos/3246665/pexels-photo-3246665.jpeg"
+    image: "/navkar1.jpeg"
   }
 ];
 
