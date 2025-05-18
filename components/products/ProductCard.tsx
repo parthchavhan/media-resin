@@ -74,7 +74,7 @@ export default function ProductCard({ product }: ProductCardProps) {
           </h3>
         </Link>
         <p className="text-sm text-gray-600 mb-2">{product.category}</p>
-        <div className="font-bold text-xl">${product.price.toFixed(2)}</div>
+        <div className="font-bold text-xl">₹{product.price.toFixed(2)}</div>
       </div>
     </div>
   );

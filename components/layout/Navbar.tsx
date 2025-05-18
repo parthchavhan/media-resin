@@ -6,6 +6,7 @@ import { useCart } from "@/context/CartContext";
 import { ShoppingBag, Menu, X } from "lucide-react";
 import { categories } from "@/lib/data";
 import { cn } from "@/lib/utils";
+import Image from "next/image";
 
 export default function Navbar() {
   const { itemCount } = useCart();
@@ -28,16 +29,23 @@ export default function Navbar() {
   return (
     <header 
       className={cn(
-        "fixed top-0 w-full z-50 transition-all duration-300",
+        "fixed top-0 w-full z-50 transition-all duration-300 shadow-lg",
         isScrolled 
-          ? "bg-white/90 backdrop-blur-md shadow-sm text-gray-900" 
+          ? "bg-white/90 backdrop-blur-md text-gray-900" 
           : "bg-gray-900 text-white"
       )}
     >
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16 md:h-20">
-          <Link href="/" className="text-xl md:text-2xl font-bold">
-            Media Resin Studio
+          <Link href="/" className="flex items-center">
+            <Image 
+              src="/logo-removebg-preview.png"
+              alt="Media Resin Studio Logo"
+              width={70}
+              height={70}
+              className="mr-2"
+            />
+            {/* <span className="text-xl md:text-2xl font-bold">Media Resin Studio</span> */}
           </Link>
 
           {/* Desktop Navigation */}
