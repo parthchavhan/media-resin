@@ -21,7 +21,7 @@ export default function CheckoutPage() {
     city: "",
     state: "",
     zipCode: "",
-    country: "United States",
+    country: "India",
     cardName: "",
     cardNumber: "",
     expDate: "",
@@ -206,6 +206,7 @@ export default function CheckoutPage() {
                       required
                       className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
                     >
+                      <option value="United States">India</option>
                       <option value="United States">United States</option>
                       <option value="Canada">Canada</option>
                       <option value="United Kingdom">United Kingdom</option>
@@ -323,7 +324,7 @@ export default function CheckoutPage() {
               <div className="space-y-4 mb-6 pt-4 border-t border-gray-200">
                 <div className="flex justify-between">
                   <span className="text-gray-600">Subtotal</span>
-                  <span className="font-medium">${subtotal.toFixed(2)}</span>
+                  <span className="font-medium">₹{subtotal.toFixed(2)}</span>
                 </div>
                 <div className="flex justify-between">
                   <span className="text-gray-600">Shipping</span>
@@ -331,7 +332,7 @@ export default function CheckoutPage() {
                 </div>
                 <div className="flex justify-between">
                   <span className="text-gray-600">Tax</span>
-                  <span className="font-medium">${(subtotal * 0.07).toFixed(2)}</span>
+                  <span className="font-medium">₹{(subtotal * 0.07).toFixed(2)}</span>
                 </div>
               </div>
               
