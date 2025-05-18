@@ -3,29 +3,30 @@ import { StarIcon } from "lucide-react";
 const testimonials = [
   {
     id: 1,
-    name: "Sarah Johnson",
+    name: "Ananya Mehra",
     role: "Interior Designer",
-    avatar: "https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg",
-    content: "The resin art pieces from Media Resin Studio have transformed my clients' spaces. The craftsmanship is impeccable, and the colors are even more vibrant in person.",
+    avatar: "https://images.pexels.com/photos/2817273/pexels-photo-2817273.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    content: "The resin art pieces from Media Resin Studio have brought a unique charm to my clients' homes. The craftsmanship is truly top-notch, and the vibrant colors add so much character to Indian interiors.",
     rating: 5
   },
   {
     id: 2,
-    name: "Michael Chen",
+    name: "Rohan Kapoor",
     role: "Art Collector",
-    avatar: "https://images.pexels.com/photos/1681010/pexels-photo-1681010.jpeg",
-    content: "Every piece I've purchased has become a conversation starter in my home. The attention to detail and quality of the materials used is outstanding.",
-    rating: 5
+    avatar: "https://images.pexels.com/photos/11091438/pexels-photo-11091438.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    content: "Each piece I’ve bought is a work of art that draws attention in my living room. The quality and detailing are exceptional—something I haven't found easily in the Indian market.",
+    rating: 4
   },
   {
     id: 3,
-    name: "Emma Williams",
+    name: "Priya Sharma",
     role: "Home Decor Enthusiast",
-    avatar: "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg",
-    content: "I ordered a custom river table and was blown away by the result. The communication throughout the process was excellent, and the final piece exceeded my expectations.",
+    avatar: "https://images.pexels.com/photos/27454185/pexels-photo-27454185/free-photo-of-beautiful-girl-face-with-messy-hair.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    content: "I got a custom river table made, and it turned out to be even better than I imagined. The team kept me updated throughout, and the final product has become the highlight of my home.",
     rating: 5
   }
 ];
+
 
 export default function Testimonials() {
   return (
