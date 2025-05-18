@@ -24,7 +24,7 @@ export const products: Product[] = [
       "/varmala2.jpg",
       "/varmala3.jpg"
     ],
-    category: "Keepsake",
+    category: "Home Decor",
   },
   {
     id: "p2",
@@ -131,3 +131,7 @@ export const products: Product[] = [
     category: "Spiritual Art",
   },
 ];
+
+export const getProductsByCategory = (categoryId: string): Product[] => {
+  return products.filter(product => product.category === categoryId);
+};

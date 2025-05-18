@@ -10,7 +10,7 @@ export const products: Product[] = [
       "https://images.pexels.com/photos/3631430/pexels-photo-3631430.jpeg",
       "https://images.pexels.com/photos/3738909/pexels-photo-3738909.jpeg"
     ],
-    category: "Resin Art",
+    category: "c1",
     featured: true,
     dimensions: "12\" x 16\"",
     materials: ["Epoxy resin", "Alcohol ink", "Canvas"],
@@ -25,7 +25,7 @@ export const products: Product[] = [
       "https://images.pexels.com/photos/5232649/pexels-photo-5232649.jpeg",
       "https://images.pexels.com/photos/5232701/pexels-photo-5232701.jpeg"
     ],
-    category: "Home Decor",
+    category: "c1",
     featured: false,
     dimensions: "4\" diameter each",
     materials: ["Epoxy resin", "Mica powder", "Gold leaf"],
@@ -40,7 +40,7 @@ export const products: Product[] = [
       "https://images.pexels.com/photos/5232694/pexels-photo-5232694.jpeg",
       "https://images.pexels.com/photos/5232654/pexels-photo-5232654.jpeg"
     ],
-    category: "Home Decor",
+    category: "c2",
     featured: false,
     dimensions: "12\" x 20\"",
     materials: ["Reclaimed wood", "Epoxy resin", "Food-safe finish"],
@@ -56,7 +56,7 @@ export const products: Product[] = [
       "/varmala2.jpg",
       "/varmala3.jpg"
     ],
-    category: "Keepsake",
+    category: "c2",
     featured: true,
     dimensions: "12\" x 20\"",
     materials: ["Reclaimed wood", "Epoxy resin", "Food-safe finish"],
@@ -72,7 +72,7 @@ export const products: Product[] = [
       "/clock2.jpg",
       "/clock3.jpg"
     ],
-    category: "Wall Art",
+    category: "c3",
     featured: true,
     dimensions: "12\" x 20\"",
     materials: ["Reclaimed wood", "Epoxy resin", "Food-safe finish"],
@@ -88,7 +88,7 @@ export const products: Product[] = [
       "/navkar2.jpeg",
       "/navkar3.jpeg"
     ],
-    category: "Spiritual Art",
+    category: "c3",
     featured: true,
     dimensions: "12\" x 20\"",
     materials: ["Reclaimed wood", "Epoxy resin", "Food-safe finish"],
