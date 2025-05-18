@@ -6,6 +6,7 @@ import { Minus, Plus, ShoppingCart } from "lucide-react";
 import { useCart } from "@/context/CartContext";
 import { Product } from "@/lib/types";
 import { cn } from "@/lib/utils";
+import Faq02 from "../kokonutui/faq-02";
 
 interface ProductDetailProps {
   product: Product;
@@ -31,6 +32,7 @@ export default function ProductDetail({ product }: ProductDetailProps) {
   };
 
   return (
+    <>
     <section className="py-12">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
@@ -72,12 +74,14 @@ export default function ProductDetail({ product }: ProductDetailProps) {
           {/* Product Info */}
           <div>
             <h1 className="text-3xl font-bold mb-2">{product.name}</h1>
-            <p className="text-lg font-medium text-primary mb-6">₹{product.price.toFixed(2)}</p>
+            
+           
             
             <div className="prose max-w-none mb-8">
               <p>{product.description}</p>
             </div>
-            
+             <p className="text-2xl font-medium text-primary mb-6">₹{product.price.toFixed(2)}</p>
+          
             {product.dimensions && (
               <div className="mb-6">
                 <h3 className="text-sm font-medium text-gray-700 mb-2">Dimensions</h3>
@@ -135,5 +139,11 @@ export default function ProductDetail({ product }: ProductDetailProps) {
         </div>
       </div>
     </section>
+
+    <div className="container mx-auto px-4">
+     <Faq02/>
+    </div>
+     
+    </>
   );
 }
