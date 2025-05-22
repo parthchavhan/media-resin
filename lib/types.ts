@@ -9,6 +9,11 @@ export interface Product {
   dimensions?: string;
   materials?: string[];
   inStock: boolean;
+  faqs?: FAQ[]; 
+}
+export interface FAQ {
+  question: string;
+  answer: string;
 }
 
 export interface Category {

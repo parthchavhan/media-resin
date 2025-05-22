@@ -14,7 +14,17 @@ export const products: Product[] = [
     featured: true,
     dimensions: "12\" x 16\"",
     materials: ["Epoxy resin", "Alcohol ink", "Canvas"],
-    inStock: true
+    inStock: true,
+    faqs: [
+      {
+        question: "What materials are used in this product?",
+        answer: "This product is made from epoxy resin, alcohol ink, and canvas."
+      },
+      {
+        question: "How should I care for this item?",
+        answer: "Keep it away from direct sunlight and clean with a soft cloth."
+      }
+    ]
   },
   {
     id: "p2",
@@ -29,7 +39,17 @@ export const products: Product[] = [
     featured: false,
     dimensions: "4\" diameter each",
     materials: ["Epoxy resin", "Mica powder", "Gold leaf"],
-    inStock: true
+    inStock: true,
+    faqs: [
+      {
+        question: "What materials are used in this product?",
+        answer: "This product is made from epoxy resin, alcohol ink, and canvas."
+      },
+      {
+        question: "How should I care for this item?",
+        answer: "Keep it away from direct sunlight and clean with a soft cloth."
+      }
+    ]
   },
   {
     id: "p4",
@@ -44,7 +64,17 @@ export const products: Product[] = [
     featured: false,
     dimensions: "12\" x 20\"",
     materials: ["Reclaimed wood", "Epoxy resin", "Food-safe finish"],
-    inStock: true
+    inStock: true,
+    faqs: [
+      {
+        question: "What materials are used in this product?",
+        answer: "This product is made from epoxy resin, alcohol ink, and canvas."
+      },
+      {
+        question: "How should I care for this item?",
+        answer: "Keep it away from direct sunlight and clean with a soft cloth."
+      }
+    ]
   },
   {
     id: "p5",
@@ -60,7 +90,17 @@ export const products: Product[] = [
     featured: true,
     dimensions: "12\" x 20\"",
     materials: ["Reclaimed wood", "Epoxy resin", "Food-safe finish"],
-    inStock: true
+    inStock: true,
+    faqs: [
+      {
+        question: "What materials are used in this product?",
+        answer: "This product is made from epoxy resin, alcohol ink, and canvas."
+      },
+      {
+        question: "How should I care for this item?",
+        answer: "Keep it away from direct sunlight and clean with a soft cloth."
+      }
+    ]
   },
   {
     id: "p6",
@@ -76,7 +116,17 @@ export const products: Product[] = [
     featured: true,
     dimensions: "12\" x 20\"",
     materials: ["Reclaimed wood", "Epoxy resin", "Food-safe finish"],
-    inStock: true
+    inStock: true,
+    faqs: [
+      {
+        question: "What materials are used in this product?",
+        answer: "This product is made from epoxy resin, alcohol ink, and canvas."
+      },
+      {
+        question: "How should I care for this item?",
+        answer: "Keep it away from direct sunlight and clean with a soft cloth."
+      }
+    ]
   },
   {
     id: "p7",
@@ -92,7 +142,17 @@ export const products: Product[] = [
     featured: true,
     dimensions: "12\" x 20\"",
     materials: ["Reclaimed wood", "Epoxy resin", "Food-safe finish"],
-    inStock: true
+    inStock: true,
+    faqs: [
+      {
+        question: "What materials are used in this product?",
+        answer: "This product is made from epoxy resin, alcohol ink, and canvas."
+      },
+      {
+        question: "How should I care for this item?",
+        answer: "Keep it away from direct sunlight and clean with a soft cloth."
+      }
+    ]
   },
 ];
 
