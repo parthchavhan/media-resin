@@ -1,7 +1,6 @@
 // app/products/[id]/page.tsx
 import { getProductById, products } from "@/lib/data";
 import ProductDetail from "@/components/products/ProductDetail";
-import { Product } from "@/lib/types";
 import Faq02 from "@/components/kokonutui/faq-02"; // Import your FAQ component
 
 // This function generates the static parameters for the dynamic route
@@ -37,19 +36,8 @@ const ProductPage = async ({ params }: { params: Params }) => {
   return (
     <div>
       <ProductDetail product={product} />
-      <div className="mt-8">
-        <h2 className="text-2xl font-bold">Frequently Asked Questions</h2>
-        {product.faqs?.length ? (
-          product.faqs.map((faq, index) => (
-            <div key={index} className="mt-4">
-              <h3 className="font-medium">{faq.question}</h3>
-              <p>{faq.answer}</p>
-            </div>
-          ))
-        ) : (
-          <p>No FAQs available for this product.</p>
-        )}
-      </div>
+      
+     
     </div>
   );
 };

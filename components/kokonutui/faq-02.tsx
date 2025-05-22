@@ -11,6 +11,10 @@ interface FAQItemProps {
   index: number
 }
 
+interface Faq02Props {
+  faqs: Omit<FAQItemProps, "index">[]
+}
+
 function FAQItem({ question, answer, index }: FAQItemProps) {
   const [isOpen, setIsOpen] = useState(false)
 
@@ -116,30 +120,7 @@ function FAQItem({ question, answer, index }: FAQItemProps) {
   )
 }
 
-function Faq02() {
-  const faqs: Omit<FAQItemProps, "index">[] = [
-    {
-      question: "What makes your platform unique?",
-      answer:
-        "Our platform stands out through its intuitive design, powerful automation capabilities, and seamless integration options. We've focused on creating a user experience that combines simplicity with advanced features.",
-    },
-    {
-      question: "How does the pricing structure work?",
-      answer:
-        "We offer flexible, transparent pricing tiers designed to scale with your needs. Each tier includes a core set of features, with additional capabilities as you move up. All plans start with a 14-day free trial.",
-    },
-    {
-      question: "What kind of support do you offer?",
-      answer:
-        "We provide comprehensive support through multiple channels. This includes 24/7 live chat, detailed documentation, video tutorials, and dedicated account managers for enterprise clients.",
-    },
-    {
-      question: "How can I get started?",
-      answer:
-        "You can get started by signing up for a free trial. Once you've signed up, you'll have access to our platform's full range of features. You can also contact our support team for assistance.",
-    },
-  ]
-
+function Faq02({ faqs }: Faq02Props) {
   return (
     <section className="py-3 w-full bg-linear-to-b from-transparent via-gray-50/50 to-transparent dark:from-transparent dark:via-white/[0.02] dark:to-transparent">
       <div className="container px-4 mx-auto">
@@ -157,7 +138,7 @@ function Faq02() {
 
         <div className="max-w-6xl mx-auto space-y-2">
           {faqs.map((faq, index) => (
-            <FAQItem key={index} {...faq} index={index} />
+            <FAQItem key={index} {...{ ...faq, index }} />
           ))}
         </div>
 

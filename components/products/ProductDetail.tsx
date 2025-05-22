@@ -141,7 +141,8 @@ export default function ProductDetail({ product }: ProductDetailProps) {
     </section>
 
     <div className="container mx-auto px-4">
-     <Faq02/>
+      <h2 className="text-2xl font-bold">Frequently Asked Questions</h2>
+      <Faq02 faqs={product.faqs || []} />
     </div>
      
     </>
