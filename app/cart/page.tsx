@@ -34,7 +34,7 @@ export default function CartPage() {
     <div className="py-12">
       <div className="container mx-auto px-4">
         <h1 className="text-3xl font-bold mb-8">Shopping Cart</h1>
-        
+
         <div className="flex flex-col lg:flex-row gap-12">
           {/* Cart Items */}
           <div className="flex-grow">
@@ -50,7 +50,7 @@ export default function CartPage() {
                   Clear Cart
                 </button>
               </div>
-              
+
               <div className="space-y-0">
                 {items.map((item) => (
                   <CartItem key={item.product.id} item={item} />
@@ -58,14 +58,14 @@ export default function CartPage() {
               </div>
             </div>
           </div>
-          
+
           {/* Order Summary */}
           <div className="lg:w-80">
             <div className="bg-white rounded-lg shadow-sm p-6 sticky top-24">
               <h2 className="text-xl font-semibold mb-6 pb-6 border-b border-gray-200">
                 Order Summary
               </h2>
-              
+
               <div className="space-y-4 mb-6">
                 <div className="flex justify-between">
                   <span className="text-gray-600">Subtotal</span>
@@ -80,14 +80,16 @@ export default function CartPage() {
                   <span className="font-medium">Calculated at checkout</span>
                 </div>
               </div>
-              
+
               <div className="border-t border-gray-200 pt-4 mb-6">
                 <div className="flex justify-between">
                   <span className="text-lg font-semibold">Total</span>
-                  <span className="text-lg font-bold">₹{subtotal.toFixed(2)}</span>
+                  <span className="text-lg font-bold">
+                    ₹{subtotal.toFixed(2)}
+                  </span>
                 </div>
               </div>
-              
+
               <Link
                 href="/checkout"
                 className="w-full py-3 bg-primary text-white rounded-md font-medium flex items-center justify-center gap-2 hover:bg-primary/90 transition-colors"
@@ -95,7 +97,7 @@ export default function CartPage() {
                 Checkout
                 <ArrowRight size={16} />
               </Link>
-              
+
               <div className="mt-4">
                 <Link
                   href="/products"

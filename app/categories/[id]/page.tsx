@@ -17,7 +17,7 @@ const CategoryPage = ({ params }: CategoryPageProps) => {
   }
 
   return (
-    <div className="container mx-auto px-4 py-10 space-y-6 max-w-7xl mx-auto">
+    <div className="container mx-auto px-4 py-10 space-y-6 max-w-7xl ">
       {/* Header */}
       <div>
         <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-2">{category.name}</h1>
@@ -51,7 +51,6 @@ const CategoryPage = ({ params }: CategoryPageProps) => {
 
 export default CategoryPage;
 
-// For static generation
 export async function generateStaticParams() {
   return categories.map((category) => ({
     id: category.id,
