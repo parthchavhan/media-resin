@@ -39,10 +39,10 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-16 md:h-20">
           <Link href="/" className="flex items-center">
             <Image 
-              src="/logo-removebg-preview.png"
+              src="/logo.png"
               alt="Media Resin Studio Logo"
-              width={80}
-              height={80}
+              width={100}
+              height={100}
               className="mr-2 transition-transform duration-300 transform hover:scale-105"
             />
             {/* <span className="text-xl md:text-2xl font-bold">Media Resin Studio</span> */}
