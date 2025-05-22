@@ -1,4 +1,8 @@
+"use client";
+
 import { StarIcon } from "lucide-react";
+import { useTheme } from "next-themes";
+import { useEffect, useState } from "react";
 
 const testimonials = [
   {
@@ -14,7 +18,7 @@ const testimonials = [
     name: "Rohan Kapoor",
     role: "Art Collector",
     avatar: "https://images.pexels.com/photos/11091438/pexels-photo-11091438.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    content: "Each piece I’ve bought is a work of art that draws attention in my living room. The quality and detailing are exceptional—something I haven't found easily in the Indian market.",
+    content: "Each piece I've bought is a work of art that draws attention in my living room. The quality and detailing are exceptional—something I haven't found easily in the Indian market.",
     rating: 4
   },
   {
@@ -27,18 +31,44 @@ const testimonials = [
   }
 ];
 
-
 export default function Testimonials() {
+  const { theme, systemTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) {
+    return null;
+  }
+
+  const currentTheme = theme === "system" ? systemTheme : theme;
+  const isDark = currentTheme === "dark";
+
   return (
-    <section className="py-16 bg-gray-50">
+    <section className={`py-16 max-w-7xl mx-auto mt-5 ${
+      isDark ? "bg-gray-800" : "bg-gray-50"
+    }`}>
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-12">What Our Customers Say</h2>
+        <h2 className={`text-3xl font-bold text-center mb-12 ${
+          isDark ? "text-white" : "text-gray-900"
+        }`}>
+          What Our Customers Say
+        </h2>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {testimonials.map((testimonial) => (
-            <div key={testimonial.id} className="bg-white rounded-lg shadow-md p-6 flex flex-col h-full">
+            <div 
+              key={testimonial.id} 
+              className={`rounded-lg p-6 flex flex-col h-full transition-shadow duration-300 ${
+                isDark
+                  ? "bg-gray-900 shadow-lg shadow-gray-900/50 border border-gray-700 hover:shadow-xl hover:shadow-gray-800/50"
+                  : "bg-white shadow-md hover:shadow-lg"
+              }`}
+            >
               <div className="flex items-center mb-4">
-                <div className="h-12 w-12 rounded-full overflow-hidden mr-4">
+                <div className="h-12 w-12 rounded-full overflow-hidden mr-4 ring-2 ring-gray-200 dark:ring-gray-600">
                   <img 
                     src={testimonial.avatar} 
                     alt={testimonial.name} 
@@ -46,8 +76,16 @@ export default function Testimonials() {
                   />
                 </div>
                 <div>
-                  <h3 className="font-semibold">{testimonial.name}</h3>
-                  <p className="text-sm text-gray-600">{testimonial.role}</p>
+                  <h3 className={`font-semibold ${
+                    isDark ? "text-white" : "text-gray-900"
+                  }`}>
+                    {testimonial.name}
+                  </h3>
+                  <p className={`text-sm ${
+                    isDark ? "text-gray-400" : "text-gray-600"
+                  }`}>
+                    {testimonial.role}
+                  </p>
                 </div>
               </div>
               
@@ -56,12 +94,19 @@ export default function Testimonials() {
                   <StarIcon 
                     key={i} 
                     size={16} 
-                    className={i < testimonial.rating ? "text-yellow-400 fill-yellow-400" : "text-gray-300"} 
+                    className={i < testimonial.rating 
+                      ? "text-yellow-400 fill-yellow-400" 
+                      : isDark ? "text-gray-600" : "text-gray-300"
+                    } 
                   />
                 ))}
               </div>
               
-              <p className="text-gray-700 italic flex-grow">{testimonial.content}</p>
+              <p className={`italic flex-grow leading-relaxed ${
+                isDark ? "text-gray-300" : "text-gray-700"
+              }`}>
+                "{testimonial.content}"
+              </p>
             </div>
           ))}
         </div>
