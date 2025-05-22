@@ -10,6 +10,8 @@ export interface Product {
   materials?: string[];
   inStock: boolean;
   faqs?: FAQ[]; 
+  note: string;
+  quantity?: number;
 }
 export interface FAQ {
   question: string;
