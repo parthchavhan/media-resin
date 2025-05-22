@@ -16,9 +16,7 @@ export default function GetInTouch() {
               Get in Touch
             </h1>
             <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-              A vast majority of the app marketers mainly content post-launch 
-              app marketing techniques and measures while completely missing 
-              pre-launch campaign. This prevents the
+             
             </p>
           </div>
 
@@ -34,7 +32,7 @@ export default function GetInTouch() {
                 <div>
                   <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-1">Address</h3>
                   <p className="text-gray-600 dark:text-gray-300">
-                    254, North City, Bulex Center, New York
+                    HPV5+3X Udaipur, Rajasthan
                   </p>
                 </div>
               </div>
@@ -47,7 +45,7 @@ export default function GetInTouch() {
                 <div>
                   <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-1">Phone</h3>
                   <p className="text-gray-600 dark:text-gray-300">
-                    09 (354) 587 874 or 10 (698) 852 741
+                    094143 43709
                   </p>
                 </div>
               </div>
@@ -60,7 +58,7 @@ export default function GetInTouch() {
                 <div>
                   <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-1">Email</h3>
                   <p className="text-gray-600 dark:text-gray-300">
-                    info@example.com or info@example.com
+                  mediaengrave@gmail.com
                   </p>
                 </div>
               </div>
@@ -71,7 +69,7 @@ export default function GetInTouch() {
         {/* Right Section - Map */}
         <div className="relative h-96 lg:h-full min-h-96 rounded-lg overflow-hidden shadow-lg">
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3305.733582618707!2d-118.8059701!3d34.1411503!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2bc85f05c0f65%3A0x1a42e898a1d631b4!2sCostco%20Wholesale!5e0!3m2!1sen!2sus!4v1647875847238!5m2!1sen!2sus"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3627.899421106371!2d73.70997679999999!3d24.5926671!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3967e5773398547f%3A0x2c9badeb814e870b!2sMedia%20Engrave!5e0!3m2!1sen!2sin!4v1747906487304!5m2!1sen!2sin"
             width="100%"
             height="100%"
             style={{ border: 0 }}
@@ -88,9 +86,9 @@ export default function GetInTouch() {
                 <MapPin className="w-4 h-4 text-white" />
               </div>
               <div>
-                <h4 className="font-semibold text-sm text-gray-900 dark:text-white">Costco Wholesale</h4>
-                <p className="text-xs text-gray-600 dark:text-gray-300">
-                  5700 Lindero Canyon Rd, Westlake Village, CA 91362
+                <h4 className="font-semibold text-sm text-gray-900 dark:text-white">Media Engrave</h4>
+                <p className="text-xs text-gray-600 dark:text-gray-400">
+                  HPV5+3X Udaipur, Rajasthan
                 </p>
                 <div className="flex items-center mt-1">
                   <div className="flex text-yellow-400">
