@@ -5,10 +5,9 @@ import Link from "next/link";
 // as they are encapsulated in the imported ProductCard
 
 // Import the updated ProductCard and Product interface from the new shared location
+import { ProductCard } from "./ProductCard";
 
-import { ProductCard } from "./Productcard";
-import { Product } from "@/lib/types";
-
+import { Product } from "@/lib/types"; // Import the Product type
 
 interface FeaturedProductsProps {
   products: Product[]; // Uses the imported Product interface
