@@ -14,16 +14,21 @@ export default function Navbar() {
   const { theme, setTheme } = useTheme();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isShopDropdownOpen, setIsShopDropdownOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
+
+  // Scroll direction awareness for navbar visibility
+  const [prevScrollPos, setPrevScrollPos] = useState(0);
+  const [visible, setVisible] = useState(true);
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
+      const currentScrollPos = window.scrollY;
+      setVisible(prevScrollPos > currentScrollPos || currentScrollPos < 10);
+      setPrevScrollPos(currentScrollPos);
     };
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [prevScrollPos]);
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -45,254 +50,154 @@ export default function Navbar() {
 
   return (
     <>
-      <header className="bg-white dark:bg-gray-900 shadow-md border-b border-gray-100 dark:border-gray-800 sticky top-0 z-50 transition-all duration-300">
+      <header className={cn(
+        "bg-white dark:bg-gray-900 shadow-md border-b border-gray-100 dark:border-gray-800 sticky top-0 z-50 transition-transform duration-300",
+        visible ? "translate-y-0" : "-translate-y-full"
+      )}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          
-          {/* Scrolled Layout - Single row with logo left, nav center, actions right */}
-          {isScrolled ? (
-            <div className="hidden lg:flex items-center justify-between py-3">
-              {/* Logo - Left */}
-              <Link href="/" className="flex-shrink-0 group">
-                <Image 
-                  src="/logo.png"
-                  alt="Media Resin Studio"
-                  width={80}
-                  height={80}
-                  className="w-auto h-10 transition-transform duration-200 group-hover:scale-105"
-                  priority
-                />
+          {/* Top section with logo centered and mobile actions on right */}
+          <div className="flex items-center justify-between py-4">
+            {/* Left spacer for desktop, empty for mobile */}
+            <div className="hidden lg:block w-24"></div>
+            
+            {/* Centered Logo */}
+            <Link href="/" className="flex-shrink-0 group">
+              <Image 
+                src="/logo.png"
+                alt="Media Resin Studio"
+                width={120}
+                height={120}
+                className="w-auto h-16 lg:h-20 transition-transform duration-200 group-hover:scale-105"
+                priority
+              />
+            </Link>
+
+            {/* Right Side Actions - Mobile Only */}
+            <div className="flex items-center space-x-3 lg:hidden">
+              {/* Theme Toggle */}
+              <button
+                onClick={toggleTheme}
+                className="p-2 rounded-lg text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-gray-50 dark:hover:bg-gray-800 transition-all duration-200"
+                aria-label="Toggle theme"
+              >
+                {theme === 'dark' ? <Sun size={22} /> : <Moon size={22} />}
+              </button>
+
+              {/* Cart */}
+              <Link
+                href="/cart"
+                className="relative p-2 rounded-lg text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-gray-50 dark:hover:bg-gray-800 transition-all duration-200"
+                aria-label={`View cart with ${itemCount} items`}
+              >
+                <ShoppingBag size={24} />
+                {itemCount > 0 && (
+                  <span className="absolute -top-1 -right-1 bg-blue-600 dark:bg-blue-500 text-white text-xs font-medium min-w-5 h-5 flex items-center justify-center rounded-full px-1">
+                    {itemCount > 99 ? '99+' : itemCount}
+                  </span>
+                )}
               </Link>
 
-              {/* Navigation - Center */}
-              <nav className="flex items-center space-x-6">
-                {navLinks.map((link) => (
-                  <Link
-                    key={link.href}
-                    href={link.href}
-                    className="text-gray-700 dark:text-gray-300 font-medium transition-colors duration-200 hover:text-blue-600 dark:hover:text-blue-400 px-3 py-2 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800"
-                  >
-                    {link.label}
-                  </Link>
-                ))}
-
-                {/* Shop Dropdown */}
-                <div 
-                  className="relative"
-                  onMouseEnter={() => setIsShopDropdownOpen(true)}
-                  onMouseLeave={() => setIsShopDropdownOpen(false)}
-                >
-                  <button 
-                    className="flex items-center gap-1 text-gray-700 dark:text-gray-300 font-medium transition-colors duration-200 hover:text-blue-600 dark:hover:text-blue-400 px-3 py-2 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800"
-                  >
-                    Shop
-                    <ChevronDown 
-                      size={16} 
-                      className={cn(
-                        "transition-transform duration-200",
-                        isShopDropdownOpen && "rotate-180"
-                      )} 
-                    />
-                  </button>
-                  
-                  {/* Dropdown Menu */}
-                  <div className={cn(
-                    "absolute top-full left-1/2 transform -translate-x-1/2 mt-2 w-64 bg-white dark:bg-gray-800 rounded-xl shadow-lg ring-1 ring-black ring-opacity-5 dark:ring-gray-700 overflow-hidden transition-all duration-200",
-                    isShopDropdownOpen 
-                      ? "opacity-100 scale-100 visible" 
-                      : "opacity-0 scale-95 invisible"
-                  )}>
-                    <div className="py-2">
-                      <div className="px-4 py-2 text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider border-b border-gray-100 dark:border-gray-700">
-                        Categories
-                      </div>
-                      {categories.map((category) => (
-                        <Link
-                          key={category.id}
-                          href={`/categories/${category.id}`}
-                          className="block px-4 py-3 text-sm text-gray-700 dark:text-gray-300 hover:bg-blue-50 dark:hover:bg-blue-900/20 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-150"
-                        >
-                          {category.name}
-                        </Link>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              </nav>
-
-              {/* Actions - Right */}
-              <div className="flex items-center space-x-3">
-                {/* Theme Toggle */}
-                <button
-                  onClick={toggleTheme}
-                  className="p-2 rounded-lg text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-gray-50 dark:hover:bg-gray-800 transition-all duration-200"
-                  aria-label="Toggle theme"
-                >
-                  {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
-                </button>
-
-                {/* Cart */}
-                <Link
-                  href="/cart"
-                  className="relative p-2 rounded-lg text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-gray-50 dark:hover:bg-gray-800 transition-all duration-200"
-                  aria-label={`View cart with ${itemCount} items`}
-                >
-                  <ShoppingBag size={22} />
-                  {itemCount > 0 && (
-                    <span className="absolute -top-1 -right-1 bg-blue-600 dark:bg-blue-500 text-white text-xs font-medium min-w-5 h-5 flex items-center justify-center rounded-full px-1">
-                      {itemCount > 99 ? '99+' : itemCount}
-                    </span>
-                  )}
-                </Link>
-              </div>
+              {/* Mobile Menu Button */}
+              <button
+                className="p-2 rounded-lg text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors duration-200"
+                onClick={toggleMobileMenu}
+                aria-label="Toggle navigation menu"
+                aria-expanded={isMobileMenuOpen}
+              >
+                {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+              </button>
             </div>
-          ) : (
-            /* Default Layout - Centered logo with nav below */
-            <>
-              {/* Top section with logo centered and mobile actions on right */}
-              <div className="flex items-center justify-between py-4">
-                {/* Left spacer for desktop, empty for mobile */}
-                <div className="hidden lg:block w-24"></div>
-                
-                {/* Centered Logo */}
-                <Link href="/" className="flex-shrink-0 group">
-                  <Image 
-                    src="/logo.png"
-                    alt="Media Resin Studio"
-                    width={120}
-                    height={120}
-                    className="w-auto h-16 lg:h-20 transition-transform duration-200 group-hover:scale-105"
-                    priority
-                  />
+
+            {/* Right Side Actions - Desktop Only (hidden when not scrolled) */}
+            <div className="hidden lg:flex items-center space-x-3 opacity-0">
+              <button className="p-2 rounded-lg">
+                <Sun size={20} />
+              </button>
+              <button className="p-2 rounded-lg">
+                <ShoppingBag size={22} />
+              </button>
+            </div>
+          </div>
+
+          {/* Desktop Navigation - Below Logo (hidden when scrolled) */}
+          <div className="hidden lg:block border-t border-gray-100 dark:border-gray-800">
+            <nav className="flex items-center justify-center space-x-8 py-4">
+              {navLinks.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className="text-gray-700 dark:text-gray-300 font-medium transition-colors duration-200 hover:text-blue-600 dark:hover:text-blue-400 px-3 py-2 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800"
+                >
+                  {link.label}
                 </Link>
+              ))}
 
-                {/* Right Side Actions - Mobile Only */}
-                <div className="flex items-center space-x-3 lg:hidden">
-                  {/* Theme Toggle */}
-                  <button
-                    onClick={toggleTheme}
-                    className="p-2 rounded-lg text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-gray-50 dark:hover:bg-gray-800 transition-all duration-200"
-                    aria-label="Toggle theme"
-                  >
-                    {theme === 'dark' ? <Sun size={22} /> : <Moon size={22} />}
-                  </button>
-
-                  {/* Cart */}
-                  <Link
-                    href="/cart"
-                    className="relative p-2 rounded-lg text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-gray-50 dark:hover:bg-gray-800 transition-all duration-200"
-                    aria-label={`View cart with ${itemCount} items`}
-                  >
-                    <ShoppingBag size={24} />
-                    {itemCount > 0 && (
-                      <span className="absolute -top-1 -right-1 bg-blue-600 dark:bg-blue-500 text-white text-xs font-medium min-w-5 h-5 flex items-center justify-center rounded-full px-1">
-                        {itemCount > 99 ? '99+' : itemCount}
-                      </span>
-                    )}
-                  </Link>
-
-                  {/* Mobile Menu Button */}
-                  <button
-                    className="p-2 rounded-lg text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors duration-200"
-                    onClick={toggleMobileMenu}
-                    aria-label="Toggle navigation menu"
-                    aria-expanded={isMobileMenuOpen}
-                  >
-                    {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-                  </button>
-                </div>
-
-                {/* Right Side Actions - Desktop Only (hidden when not scrolled) */}
-                <div className="hidden lg:flex items-center space-x-3 opacity-0">
-                  <button className="p-2 rounded-lg">
-                    <Sun size={20} />
-                  </button>
-                  <button className="p-2 rounded-lg">
-                    <ShoppingBag size={22} />
-                  </button>
-                </div>
-              </div>
-
-              {/* Desktop Navigation - Below Logo (hidden when scrolled) */}
-              <div className="hidden lg:block border-t border-gray-100 dark:border-gray-800">
-                <nav className="flex items-center justify-center space-x-8 py-4">
-                  {navLinks.map((link) => (
-                    <Link
-                      key={link.href}
-                      href={link.href}
-                      className="text-gray-700 dark:text-gray-300 font-medium transition-colors duration-200 hover:text-blue-600 dark:hover:text-blue-400 px-3 py-2 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800"
-                    >
-                      {link.label}
-                    </Link>
-                  ))}
-
-                  {/* Shop Dropdown */}
-                  <div 
-                    className="relative"
-                    onMouseEnter={() => setIsShopDropdownOpen(true)}
-                    onMouseLeave={() => setIsShopDropdownOpen(false)}
-                  >
-                    <button 
-                      className="flex items-center gap-1 text-gray-700 dark:text-gray-300 font-medium transition-colors duration-200 hover:text-blue-600 dark:hover:text-blue-400 px-3 py-2 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800"
-                    >
-                      Shop
-                      <ChevronDown 
-                        size={16} 
-                        className={cn(
-                          "transition-transform duration-200",
-                          isShopDropdownOpen && "rotate-180"
-                        )} 
-                      />
-                    </button>
-                    
-                    {/* Dropdown Menu */}
-                    <div className={cn(
-                      "absolute top-full left-1/2 transform -translate-x-1/2 mt-2 w-64 bg-white dark:bg-gray-800 rounded-xl shadow-lg ring-1 ring-black ring-opacity-5 dark:ring-gray-700 overflow-hidden transition-all duration-200",
-                      isShopDropdownOpen 
-                        ? "opacity-100 scale-100 visible" 
-                        : "opacity-0 scale-95 invisible"
-                    )}>
-                      <div className="py-2">
-                        <div className="px-4 py-2 text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider border-b border-gray-100 dark:border-gray-700">
-                          Categories
-                        </div>
-                        {categories.map((category) => (
-                          <Link
-                            key={category.id}
-                            href={`/categories/${category.id}`}
-                            className="block px-4 py-3 text-sm text-gray-700 dark:text-gray-300 hover:bg-blue-50 dark:hover:bg-blue-900/20 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-150"
-                          >
-                            {category.name}
-                          </Link>
-                        ))}
-                      </div>
+              {/* Shop Dropdown */}
+              <div 
+                className="relative"
+                onMouseEnter={() => setIsShopDropdownOpen(true)}
+                onMouseLeave={() => setIsShopDropdownOpen(false)}
+              >
+                <button 
+                  className="flex items-center gap-1 text-gray-700 dark:text-gray-300 font-medium transition-colors duration-200 hover:text-blue-600 dark:hover:text-blue-400 px-3 py-2 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800"
+                >
+                  Shop
+                  <ChevronDown 
+                    size={16} 
+                    className={cn(
+                      "transition-transform duration-200",
+                      isShopDropdownOpen && "rotate-180"
+                    )} 
+                  />
+                </button>
+                
+                {/* Dropdown Menu */}
+                <div className={cn(
+                  "absolute top-full left-1/2 transform -translate-x-1/2 mt-2 w-64 bg-white dark:bg-gray-800 rounded-xl shadow-lg ring-1 ring-black ring-opacity-5 dark:ring-gray-700 overflow-hidden transition-all duration-200",
+                  isShopDropdownOpen 
+                    ? "opacity-100 scale-100 visible" 
+                    : "opacity-0 scale-95 invisible"
+                )}>
+                  <div className="py-2">
+                    <div className="px-4 py-2 text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider border-b border-gray-100 dark:border-gray-700">
+                      Categories
                     </div>
+                    {categories.map((category) => (
+                      <Link
+                        key={category.id}
+                        href={`/categories/${category.id}`}
+                        className="block px-4 py-3 text-sm text-gray-700 dark:text-gray-300 hover:bg-blue-50 dark:hover:bg-blue-900/20 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-150"
+                      >
+                        {category.name}
+                      </Link>
+                    ))}
                   </div>
-
-                  {/* Desktop Theme Toggle and Cart */}
-                  <button
-                    onClick={toggleTheme}
-                    className="p-2 rounded-lg text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-gray-50 dark:hover:bg-gray-800 transition-all duration-200"
-                    aria-label="Toggle theme"
-                  >
-                    {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
-                  </button>
-
-                  <Link
-                    href="/cart"
-                    className="relative p-2 rounded-lg text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-gray-50 dark:hover:bg-gray-800 transition-all duration-200"
-                    aria-label={`View cart with ${itemCount} items`}
-                  >
-                    <ShoppingBag size={22} />
-                    {itemCount > 0 && (
-                      <span className="absolute -top-1 -right-1 bg-blue-600 dark:bg-blue-500 text-white text-xs font-medium min-w-5 h-5 flex items-center justify-center rounded-full px-1">
-                        {itemCount > 99 ? '99+' : itemCount}
-                      </span>
-                    )}
-                  </Link>
-                </nav>
+                </div>
               </div>
-            </>
-          )}
+
+              {/* Desktop Theme Toggle and Cart */}
+              <button
+                onClick={toggleTheme}
+                className="p-2 rounded-lg text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-gray-50 dark:hover:bg-gray-800 transition-all duration-200"
+                aria-label="Toggle theme"
+              >
+                {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
+              </button>
+
+              <Link
+                href="/cart"
+                className="relative p-2 rounded-lg text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-gray-50 dark:hover:bg-gray-800 transition-all duration-200"
+                aria-label={`View cart with ${itemCount} items`}
+              >
+                <ShoppingBag size={22} />
+                {itemCount > 0 && (
+                  <span className="absolute -top-1 -right-1 bg-blue-600 dark:bg-blue-500 text-white text-xs font-medium min-w-5 h-5 flex items-center justify-center rounded-full px-1">
+                    {itemCount > 99 ? '99+' : itemCount}
+                  </span>
+                )}
+              </Link>
+            </nav>
+          </div>
         </div>
       </header>
 
