@@ -65,9 +65,9 @@ export default function Navbar() {
               <Image 
                 src="/logo.png"
                 alt="Media Resin Studio"
-                width={120}
-                height={120}
-                className="w-auto h-16 lg:h-20 transition-transform duration-200 group-hover:scale-105"
+                width={180}
+                height={180}
+                className="w-auto h-20 lg:h-28 transition-transform duration-200 group-hover:scale-105"
                 priority
               />
             </Link>
@@ -222,7 +222,7 @@ export default function Navbar() {
               alt="Media Resin Studio"
               width={80}
               height={80}
-              className="w-auto h-10"
+              className="w-auto h-14"
             />
             <div className="flex items-center space-x-2">
               <button
