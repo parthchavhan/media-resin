@@ -35,8 +35,8 @@ export default function Navbar() {
           : "bg-transparent text-white"
       )}
     >
-      <div className="container mx-auto px-4 py-2 flex flex-col items-center">
-        <div className="flex justify-center">
+      <div className="container mx-auto px-4 py-2 flex items-center justify-between">
+        <div>
           <Link href="/" className="flex items-center">
             <Image 
               src="/logo.png"

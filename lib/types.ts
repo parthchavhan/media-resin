@@ -12,6 +12,14 @@ export interface Product {
   faqs?: FAQ[]; 
   note: string;
   quantity?: number;
+  thicknessOptions?: {
+    value: string;
+    priceModifier: number;
+  }[];
+  colorOptions?: {
+    value: string;
+    priceModifier: number;
+  }[];
 }
 export interface FAQ {
   question: string;

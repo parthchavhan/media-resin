@@ -25,6 +25,16 @@ export const products: Product[] = [
         question: "How should I care for this item?",
         answer: "Keep it away from direct sunlight and clean with a soft cloth."
       }
+    ],
+    thicknessOptions: [
+      { value: "Thin (0.5 inch)", priceModifier: 0 },
+      { value: "Medium (1 inch)", priceModifier: 20 },
+      { value: "Thick (1.5 inch)", priceModifier: 40 }
+    ],
+    colorOptions: [
+      { value: "Ocean Blue", priceModifier: 0 },
+      { value: "Teal Splash", priceModifier: 10 },
+      { value: "White Wave", priceModifier: 15 }
     ]
   },
   {

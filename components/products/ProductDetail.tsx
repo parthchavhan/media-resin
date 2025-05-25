@@ -17,6 +17,13 @@ export default function ProductDetail({ product }: ProductDetailProps) {
   const [quantity, setQuantity] = useState(1);
   const [selectedImage, setSelectedImage] = useState(0);
 
+  const [selectedThickness, setSelectedThickness] = useState(
+    product.thicknessOptions && product.thicknessOptions.length > 0 ? product.thicknessOptions[0].value : ""
+  );
+  const [selectedColor, setSelectedColor] = useState(
+    product.colorOptions && product.colorOptions.length > 0 ? product.colorOptions[0].value : ""
+  );
+
   const decreaseQuantity = () => {
     if (quantity > 1) {
       setQuantity(quantity - 1);
@@ -30,6 +37,10 @@ export default function ProductDetail({ product }: ProductDetailProps) {
   const handleAddToCart = () => {
     addItem(product, quantity);
   };
+
+  const thicknessPriceModifier = product.thicknessOptions?.find(opt => opt.value === selectedThickness)?.priceModifier || 0;
+  const colorPriceModifier = product.colorOptions?.find(opt => opt.value === selectedColor)?.priceModifier || 0;
+  const finalPrice = product.price + thicknessPriceModifier + colorPriceModifier;
 
   return (
     <>
@@ -80,7 +91,54 @@ export default function ProductDetail({ product }: ProductDetailProps) {
             <div className="prose max-w-none mb-8">
               <p>{product.description}</p>
             </div>
-             <p className="text-2xl font-medium text-primary mb-6">₹{product.price.toFixed(2)}</p>
+
+            {product.thicknessOptions && product.thicknessOptions.length > 0 && (
+              <div className="mb-6">
+                <h3 className="text-sm font-medium text-gray-700 mb-2">Thickness</h3>
+                <div className="flex flex-wrap gap-2">
+                  {product.thicknessOptions.map(({ value }, index) => (
+                    <button
+                      key={index}
+                      onClick={() => setSelectedThickness(value)}
+                      className={cn(
+                        "px-3 py-1 rounded-full border text-sm",
+                        selectedThickness === value
+                          ? "bg-primary text-white border-primary"
+                          : "bg-gray-100 text-gray-700 border-transparent hover:bg-gray-200"
+                      )}
+                      type="button"
+                    >
+                      {value}
+                    </button>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {product.colorOptions && product.colorOptions.length > 0 && (
+              <div className="mb-6">
+                <h3 className="text-sm font-medium text-gray-700 mb-2">Color</h3>
+                <div className="flex flex-wrap gap-2">
+                  {product.colorOptions.map(({ value }, index) => (
+                    <button
+                      key={index}
+                      onClick={() => setSelectedColor(value)}
+                      className={cn(
+                        "px-3 py-1 rounded-full border text-sm",
+                        selectedColor === value
+                          ? "bg-primary text-white border-primary"
+                          : "bg-gray-100 text-gray-700 border-transparent hover:bg-gray-200"
+                      )}
+                      type="button"
+                    >
+                      {value}
+                    </button>
+                  ))}
+                </div>
+              </div>
+            )}
+
+             <p className="text-2xl font-medium text-primary mb-6">₹{finalPrice.toFixed(2)}</p>
           
             {product.dimensions && (
               <div className="mb-6">
