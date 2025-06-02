@@ -16,7 +16,7 @@ export default function ProductDetail({ product }: ProductDetailProps) {
   const { addItem } = useCart();
   const [quantity, setQuantity] = useState(1);
   const [selectedImage, setSelectedImage] = useState(0);
-
+8                                                          
   const [selectedThickness, setSelectedThickness] = useState(
     product.thicknessOptions && product.thicknessOptions.length > 0 ? product.thicknessOptions[0].value : ""
   );
