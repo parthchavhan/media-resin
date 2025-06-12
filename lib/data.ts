@@ -15,7 +15,7 @@ export const products: Product[] = [
     "https://i.pinimg.com/736x/10/b7/dc/10b7dc89fbdd924e1b979db3265175f6.jpg",
     "https://i.pinimg.com/736x/10/b7/dc/10b7dc89fbdd924e1b979db3265175f6.jpg"
   ],
-  "category": "Geode Art",
+  "category": "geode-art",
   "featured": false,
   "note": "Since each piece is handmade, it won’t look exactly like the picture. There might be small differences—but it could turn out even better!",
   "dimensions": "",
@@ -88,7 +88,7 @@ export const products: Product[] = [
     "https://i.pinimg.com/736x/d6/f3/6c/d6f36cb1d0b79a99a9780963df65d3e8.jpg",
     "https://i.pinimg.com/736x/6b/48/de/6b48de180eab980496ab2780e47eba56.jpg"
   ],
-  "category": "Geode Art",
+  "category": "geode-art",
   "featured" : true,
   "note": "Since each piece is handmade, it won’t look exactly like the picture. There might be small differences—but it could turn out even better!",
   "dimensions": "",
@@ -150,7 +150,7 @@ export const products: Product[] = [
     "https://i.pinimg.com/736x/02/38/f5/0238f5b0ee6fe385cefaa9940fd20d82.jpg",
     "https://i.pinimg.com/736x/ff/ef/e9/ffefe983778c63b2f21265b2615c4e6b.jpg"
   ],
-  "category": "Geode Art",
+  "category": "geode-art",
   "featured": true,
   "note": "This artwork is not limited to the “ॐ” symbol. You can personalize it with any religious or spiritual symbol or mantra of your choice—be it Hanuman Chalisa, Shanti Mantra, Islamic calligraphy, Christian verses, or anything else that reflects your faith.",
   "dimensions": "",
@@ -219,7 +219,7 @@ export const products: Product[] = [
     "https://i.pinimg.com/736x/b9/c7/17/b9c7176009d25fee7d59f07affe74475.jpg",
     "https://i.pinimg.com/736x/86/46/c7/8646c7be0542a53a24aca2f7f9d15d73.jpg"
   ],
-  "category": "Geode Art",
+  "category": "geode-art",
   "featured": true,
   "note": "Since each piece is handmade, it won’t look exactly like the picture. There might be small differences—but it could turn out even better!",
   "dimensions": "18*24 Inches",
@@ -279,13 +279,10 @@ export const products: Product[] = [
     "https://i.pinimg.com/736x/18/cf/f2/18cff2f18a64129a397bc3e55b8be62b.jpg",
     "https://i.pinimg.com/736x/14/f0/ca/14f0ca8c70934d13d1b85fc93aa2c2ab.jpg"
   ],
-  "category": "Geode Art",
+  "category": "geode-art",
   "featured": true,
   "note": "Since each piece is handmade, it won’t look exactly like the picture. There might be small differences—but it could turn out even better!",
   "dimensions": "18*24 Inches",
-  "materials": [
-    ""
-  ],
   "inStock": true,
   "faqs": [
     {
@@ -337,13 +334,10 @@ export const products: Product[] = [
     "https://i.pinimg.com/736x/e1/c6/42/e1c642b63bf8c6409c1c84bc06d9adc3.jpg",
     "https://i.pinimg.com/736x/83/60/77/836077e6e3bceb8c2e8353bb4001d2df.jpg"
   ],
-  "category": "Varmala Preservation Frames",
+  "category": "varmala-preservation-frames",
   "featured": false,
   "note": "Personalize this frame with up to 2 photos, your names, and the date of your wedding or any special occasion — making it a truly one-of-a-kind keepsake.",
   "dimensions": "8 inch round (in diameter) & 20 mm thickness",
-  "materials": [
-    ""
-  ],
   "inStock": true,
   "faqs": [
     {
@@ -395,7 +389,7 @@ export const products: Product[] = [
       "https://images.pexels.com/photos/3631430/pexels-photo-3631430.jpeg",
       "https://images.pexels.com/photos/3738909/pexels-photo-3738909.jpeg"
     ],
-    category: "c1",
+    category: "geode-art",
     featured: false,
     note: "har chiz unique",
     dimensions: "12\" x 16\"",
@@ -426,38 +420,20 @@ export const products: Product[] = [
 ];
 
 export const categories: Category[] = [
-  {
-    id: "c1",
-    name: "Resin Art",
-    description: "Stunning resin art pieces to elevate your space",
-    image: "https://images.pexels.com/photos/3631430/pexels-photo-3631430.jpeg"
-  },
-  {
-    id: "c2",
-    name: "Home Decor",
-    description: "Functional art pieces for your living space",
-    image: "/clock1.jpg"
-  },
-  {
-    id: "c3",
-    name: "Art Prints",
-    description: "Premium prints of original artwork",
-    image: "/navkar1.jpeg"
-  },
    {
-    id: "Varmala Preservation Frame",
+    id: "varmala-preservation-frame",
     name: "Varmala Preservation Frame",
     description: "Stunning resin art pieces to elevate your space",
     image: "https://images.pexels.com/photos/3631430/pexels-photo-3631430.jpeg"
   },
   {
-    id: "Mantra Frames",
+    id: "mantra-frames",
     name: "Mantra Frames",
     description: "Functional art pieces for your living space",
     image: "/clock1.jpg"
   },
   {
-    id: "Geode Art",
+    id: "geode-art",
     name: "Geode Art",
     description: "Premium prints of original artwork",
     image: "/navkar1.jpeg"
