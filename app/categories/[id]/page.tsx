@@ -51,9 +51,7 @@ const CategoryPage = ({ params }: CategoryPageProps) => {
 
 export default CategoryPage;
 
-// For static generation
+// For static generation with output: export, generate all category paths
 export async function generateStaticParams() {
-  return categories.map((category) => ({
-    id: category.id,
-  }));
+  return categories.map((category) => ({ id: category.id }));
 }

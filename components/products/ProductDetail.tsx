@@ -49,11 +49,12 @@ export default function ProductDetail({ product }: ProductDetailProps) {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           {/* Product Images */}
           <div className="space-y-4">
-            <div className="relative aspect-square rounded-lg overflow-hidden">
+            <div className="relative  rounded-lg overflow-hidden">
               <Image
                 src={product.images[selectedImage]}
                 alt={product.name}
-                fill
+                height={300}
+                width={400}
                 priority
                 className="object-cover"
               />
@@ -185,7 +186,6 @@ export default function ProductDetail({ product }: ProductDetailProps) {
               </div>
             </div>
             
-            {/* Add to Cart Button */}
             <button
               onClick={handleAddToCart}
               className="w-full md:w-auto px-8 py-3 bg-primary text-white rounded-md font-medium flex items-center justify-center gap-2 hover:bg-primary/90 transition-colors"
@@ -199,7 +199,6 @@ export default function ProductDetail({ product }: ProductDetailProps) {
     </section>
 
     <div className="container mx-auto px-4">
-      <h2 className="text-2xl font-bold">Frequently Asked Questions</h2>
       <Faq02 faqs={product.faqs || []} />
     </div>
      

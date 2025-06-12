@@ -24,7 +24,7 @@ export default function ProductCard({ product }: ProductCardProps) {
       onMouseLeave={() => setIsHovered(false)}
     >
       {/* Product Image Section */}
-      <div className="relative aspect-square overflow-hidden">
+      <div className="relative  overflow-hidden">
         <Link href={`/products/${product.id}`}>
           <Image
             src={
@@ -33,7 +33,8 @@ export default function ProductCard({ product }: ProductCardProps) {
                 : product.images[0]
             }
             alt={product.name}
-            fill
+            width={300}
+            height={400}
             className="object-cover transition-transform duration-500 group-hover:scale-105"
           />
         </Link>
@@ -57,7 +58,7 @@ export default function ProductCard({ product }: ProductCardProps) {
         </div>
 
         {/* Add to Cart on Hover */}
-        <div
+        {/* <div
           className={cn(
             "absolute bottom-0 left-0 right-0 backdrop-blur-sm py-3 px-4 transform transition-transform duration-300",
             "bg-white dark:bg-zinc-900",
@@ -74,11 +75,11 @@ export default function ProductCard({ product }: ProductCardProps) {
             <ShoppingCart size={16} />
             Add to Cart
           </button>
-        </div>
+        </div> */}
       </div>
 
       {/* Product Details */}
-      <div className="p-4">
+      <div className="p-2">
         <Link href={`/products/${product.id}`}>
           <h3 className="font-medium text-lg mb-1 group-hover:text-primary transition-colors text-zinc-900 dark:text-gray-100">
             {product.name}
@@ -87,9 +88,19 @@ export default function ProductCard({ product }: ProductCardProps) {
         <p className="text-sm text-gray-600 dark:text-gray-400 mb-2">
           {product.category}
         </p>
-        <div className="font-bold text-xl text-zinc-800 dark:text-gray-100">
+        <div className="font-bold text-lg text-zinc-800 pb-3 dark:text-gray-100">
           ₹{product.price.toFixed(2)}
         </div>
+         <button
+            onClick={() => addItem(product, 1)}
+            className={cn(
+              "w-full py-2 rounded-md font-medium flex items-center justify-center gap-2 transition-colors",
+              "bg-primary text-white hover:bg-primary dark:text-black"
+            )}
+          >
+            <ShoppingCart size={16} />
+            Add to Cart
+          </button>
       </div>
     </div>
   );

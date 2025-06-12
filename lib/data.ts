@@ -1,7 +1,392 @@
 import { Product, Category } from "./types";
 
 export const products: Product[] = [
+ 
   {
+  "id": "P1",
+  "name": "Resin Geode Art – Blue and White Crystal Wall Decor ",
+  "description": "Elegant handmade resin geode art in stunning blue, white, and gold tones, featuring real crystals and marble stones. Perfect for wall decor, tabletops, or gifting.",
+  "price": 2300,
+  "images": [
+    "https://i.pinimg.com/736x/4e/43/89/4e4389985932c5fd99bbd8d1c484a30a.jpg",
+    "https://i.pinimg.com/736x/6f/4e/63/6f4e638dba30aea83bb3a91fa050a534.jpg",
+    "https://i.pinimg.com/736x/b3/26/1c/b3261c6a731a02b3c079765c0f0577c3.jpg",
+    "https://i.pinimg.com/736x/2f/45/06/2f4506ffd143e2a79ed5f7133c551415.jpg",
+    "https://i.pinimg.com/736x/10/b7/dc/10b7dc89fbdd924e1b979db3265175f6.jpg",
+    "https://i.pinimg.com/736x/10/b7/dc/10b7dc89fbdd924e1b979db3265175f6.jpg"
+  ],
+  "category": "Geode Art",
+  "featured": false,
+  "note": "Since each piece is handmade, it won’t look exactly like the picture. There might be small differences—but it could turn out even better!",
+  "dimensions": "",
+  "materials": [
+    ""
+  ],
+  "inStock": true,
+  "faqs": [
+    {
+      "question": "Product Description",
+      "answer": "Elevate your space with this Blue and White Resin Geode Art, a handmade crystal wall decor piece crafted from premium epoxy resin, natural stones, and metallic accents. Designed with elegant tones of blue, white, and shimmering gold, this artwork brings the raw beauty of geodes and crystals into your home. Each section features hand-placed crystal chips such as amethyst and quartz, giving it a textured, three-dimensional look. The circular design is visually striking and adds a sense of calm and luxury to any room."
+    },
+    {
+      "question": "Dimension, Timeline & Material",
+      "answer": "Dimensions:  Available in 16 inch, 18 inch, 24 inch, 36 inch, and 48 inch diameters.  If you need a larger size or a custom dimension, feel free to contact us directly on WhatsApp. Timelines:  Please allow 15–20 working days for delivery. Each artwork is made to order, and resin takes time to fully cure. We take this time to ensure you receive a beautifully finished, high-quality piece. Placement:  This artwork is designed exclusively for wall display. It comes ready to hang and includes a mounting kit for easy installation. Perfect for living rooms, bedrooms, entryways, or any wall that needs a stunning focal point."
+    },
+    {
+      "question": "Instructions",
+      "answer": "Wipe gently with a soft, dry cloth"
+    },
+    {
+      "question": "Return & Refund Policy",
+      "answer": "Return and Refund Policy Overview:  All our products are handmade and made-to-order. We only accept returns if the product arrives damaged.  Returns for Damaged Products:  If your product arrives damaged, you must tell us within 2-3 days of delivery. Send us a message on WhatsApp at +91-9414343709 or email us at mediaengrave@gmail.com with details and pictures. We suggest making a video while unboxing the product to help us understand what went wrong (this is just advice, not required). Send the damaged product back to Khara Kuaa, 58, 100 Feet Rd, near Subha Aashiyana Complex, Shobhagpura, Udaipur, Rajasthan 313001 in its original box. We will cover the return shipping cost. We’ll replace it with a new one. No money refunds will be given. No Returns for Change of Mind:  Since each product is made just for you, we don’t accept returns if you change your mind. If You Damage the Product:  If you damage the product, we can try to fix it for an extra cost. Contact us to know the repair price. You’ll pay for shipping to us and back."
+    },
+    {
+      "question": "Contact Us",
+      "answer": "Reach us on WhatsApp at +91-9414343709 or email mediaengrave@gmail.com for help!"
+    }
+  ],
+  "thicknessOptions": [
+    {
+      "value": "16 Inches",
+      "priceModifier": 0
+    },
+    {
+      "value": "18 Inches ",
+      "priceModifier": 500
+    },
+    {
+      "value": "24 Inches",
+      "priceModifier": 2700
+    },
+    {
+      "value": "36 Inches",
+      "priceModifier": 8700
+    },
+    {
+      "value": "48 Inches",
+      "priceModifier": 17700
+    }
+  ],
+  "colorOptions": [
+    {
+      "value": "",
+      "priceModifier": 0
+    }
+  ]
+},
+
+{
+  "id": "P2",
+  "name": "Geode Art – Red Crystal Magic",
+  "description": "A pretty geode art with a bright red base, mixed with gold and light brown swirls, and decorated with small black, pinkish, and yellowish stones that look like a real geode.",
+  "price": 2300,
+  "images": [
+    "https://i.pinimg.com/736x/a6/15/78/a61578ca00efdcdd8d9e1b5997f60144.jpg",
+    "https://i.pinimg.com/736x/9c/79/11/9c791147f748e1b351773e75238e5b74.jpg",
+    "https://i.pinimg.com/736x/d3/fc/bd/d3fcbdcb8d2babfaa70be008bf0ed612.jpg",
+    "https://i.pinimg.com/736x/99/a8/77/99a877bde0e486033ec60403d08485c4.jpg",
+    "https://i.pinimg.com/736x/d6/f3/6c/d6f36cb1d0b79a99a9780963df65d3e8.jpg",
+    "https://i.pinimg.com/736x/6b/48/de/6b48de180eab980496ab2780e47eba56.jpg"
+  ],
+  "category": "Geode Art",
+  "featured" : true,
+  "note": "Since each piece is handmade, it won’t look exactly like the picture. There might be small differences—but it could turn out even better!",
+  "dimensions": "",
+  "materials": [
+    ""
+  ],
+  "inStock": true,
+  "faqs": [
+    {
+      "question": "Description",
+      "answer": "Red Gold Geode is a beautiful round artwork that catches your eye with its bright red color, like a shiny ruby. The red is mixed with swirls of gold, light brown, and a bit of white, making it look smooth and flowy, just like the inside of a real geode. There are small, shiny stones stuck into it—some are black, some are pinkish-brown, and others are yellowish-green. These stones are placed in neat, wavy lines, giving the art a bumpy texture and making it feel more real. Thin gold lines separate the different parts, adding a fancy touch and showing off all the little details. It’s placed on a soft white cloth, which makes the red and gold colors pop even more. Red Gold Geode is a lovely piece that brings the beauty of nature into your home in a simple, eye-catching way."
+    },
+    {
+      "question": "Dimension, Timeline & Material",
+      "answer": "Dimensions:  Available in 18*24 inch, 24*36 inch, and 36*48 inch. If you need a larger size or a custom dimension, feel free to contact us directly on WhatsApp. Timelines:  Please allow 15–20 working days for delivery. Each artwork is made to order, and resin takes time to fully cure. We take this time to ensure you receive a beautifully finished, high-quality piece. Placement:  This artwork is designed exclusively for wall display. It comes ready to hang and includes a mounting kit for easy installation. Perfect for living rooms, bedrooms, entryways, or any wall that needs a stunning focal point."
+    },
+    {
+      "question": "Return & Refund Policy",
+      "answer": "Return and Refund Policy Overview:  All our products are handmade and made-to-order. We only accept returns if the product arrives damaged.  Returns for Damaged Products:  If your product arrives damaged, you must tell us within 2-3 days of delivery. Send us a message on WhatsApp at +91-9414343709 or email us at mediaengrave@gmail.com with details and pictures. We suggest making a video while unboxing the product to help us understand what went wrong (this is just advice, not required). Send the damaged product back to Khara Kuaa, 58, 100 Feet Rd, near Subha Aashiyana Complex, Shobhagpura, Udaipur, Rajasthan 313001 in its original box. We will cover the return shipping cost. We’ll replace it with a new one. No money refunds will be given. No Returns for Change of Mind:  Since each product is made just for you, we don’t accept returns if you change your mind. If You Damage the Product:  If you damage the product, we can try to fix it for an extra cost. Contact us to know the repair price. You’ll pay for shipping to us and back."
+    },
+    {
+      "question": "Contact Us",
+      "answer": "Reach us on WhatsApp at +91-9414343709 or email mediaengrave@gmail.com for help!"
+    }
+  ],
+  "thicknessOptions": [
+    {
+      "value": "16 Inches",
+      "priceModifier": 0
+    },
+    {
+      "value": "18 Inches",
+      "priceModifier": 500
+    },
+    {
+      "value": "24 Inches",
+      "priceModifier": 2700
+    },
+    {
+      "value": "36 Inches",
+      "priceModifier": 8700
+    },
+    {
+      "value": "48 Inches",
+      "priceModifier": 17700
+    },
+  ],
+},
+{
+  "id": "P3",
+  "name": "Geode Art - Blue Om Serenity",
+  "description": "Elevate your space with this handcrafted geode resin art featuring the golden “ॐ” symbol. Vibrant, spiritual, and fully customizable for other religions too.",
+  "price": 2300,
+  "images": [
+    "https://i.pinimg.com/736x/56/75/5f/56755fd1df91e4514891dd6e8bbf2e88.jpg",
+    "https://i.pinimg.com/736x/be/cf/e4/becfe4d99d8dab273d0440c154a79af3.jpg",
+    "https://i.pinimg.com/736x/00/a7/7f/00a77ff196c658849fa14c206751592f.jpg",
+    "https://i.pinimg.com/736x/0e/1f/f9/0e1ff9752699db01de077ad1c109d066.jpg",
+    "https://i.pinimg.com/736x/02/38/f5/0238f5b0ee6fe385cefaa9940fd20d82.jpg",
+    "https://i.pinimg.com/736x/ff/ef/e9/ffefe983778c63b2f21265b2615c4e6b.jpg"
+  ],
+  "category": "Geode Art",
+  "featured": true,
+  "note": "This artwork is not limited to the “ॐ” symbol. You can personalize it with any religious or spiritual symbol or mantra of your choice—be it Hanuman Chalisa, Shanti Mantra, Islamic calligraphy, Christian verses, or anything else that reflects your faith.",
+  "dimensions": "",
+  "materials": [
+    ""
+  ],
+  "inStock": true,
+  "faqs": [
+    {
+      "question": "Description ",
+      "answer": "Transform your space with this stunning handmade geode resin art featuring the sacred “ॐ” symbol—a universal mark of peace, spirituality, and cosmic energy. Designed in a circular format, this piece brings together vibrant hues of blue, pink, and earthy tones, highlighted with glistening crystal textures that resemble real geodes.  Each layer is carefully poured using premium epoxy resin and hand-placed stones to create a mesmerizing 3D finish. The central golden “ॐ” radiates divine energy, making it a perfect centerpiece for your living room, meditation corner, or spiritual nook."
+    },
+    {
+      "question": "Dimension, Timeline & Material",
+      "answer": "Dimensions:  Available in 16 inch, 18 inch, 24 inch, 36 inch, and 48 inch diameters.  If you need a larger size or a custom dimension, feel free to contact us directly on WhatsApp. Timelines:  Please allow 15–20 working days for delivery. Each artwork is made to order, and resin takes time to fully cure. We take this time to ensure you receive a beautifully finished, high-quality piece. Placement:  This artwork is designed exclusively for wall display. It comes ready to hang and includes a mounting kit for easy installation. Perfect for living rooms, bedrooms, entryways, or any wall that needs a stunning focal point."
+    },
+    {
+      "question": "Return & Refund Policy",
+      "answer": "Return and Refund Policy Overview:  All our products are handmade and made-to-order. We only accept returns if the product arrives damaged.  Returns for Damaged Products:  If your product arrives damaged, you must tell us within 2-3 days of delivery. Send us a message on WhatsApp at +91-9414343709 or email us at mediaengrave@gmail.com with details and pictures. We suggest making a video while unboxing the product to help us understand what went wrong (this is just advice, not required). Send the damaged product back to Khara Kuaa, 58, 100 Feet Rd, near Subha Aashiyana Complex, Shobhagpura, Udaipur, Rajasthan 313001 in its original box. We will cover the return shipping cost. We’ll replace it with a new one. No money refunds will be given. No Returns for Change of Mind:  Since each product is made just for you, we don’t accept returns if you change your mind. If You Damage the Product:  If you damage the product, we can try to fix it for an extra cost. Contact us to know the repair price. You’ll pay for shipping to us and back."
+    },
+    {
+      "question": "Contact Us",
+      "answer": "Reach us on WhatsApp at +91-9414343709 or email mediaengrave@gmail.com for help!"
+    }
+  ],
+  "thicknessOptions": [
+    {
+      "value": "16 Inches",
+      "priceModifier": 0
+    },
+    {
+      "value": "18 Inches",
+      "priceModifier": 500
+    },
+    {
+      "value": "24 Inches",
+      "priceModifier": 2700
+    },
+    {
+      "value": "36 Inches",
+      "priceModifier": 8700
+    },
+    {
+      "value": "48 Inches",
+      "priceModifier": 17700
+    }
+  ],
+  "colorOptions": [
+    {
+      "value": "",
+      "priceModifier": 0
+    }
+  ]
+},
+
+{
+  "id": "P4",
+  "name": "Geode Art – Purple Mirage",
+  "description": "A luxurious handcrafted geode art piece that adds depth, elegance, and positive energy to any space. Each piece is unique and radiates timeless beauty.",
+  "price": 3700,
+  "images": [
+    "https://i.pinimg.com/736x/c3/6f/45/c36f4516c012d69ce5f4f3c6624877e3.jpg",
+    "https://i.pinimg.com/736x/b8/d6/6c/b8d66c767375022541b2beee43a2be6c.jpg",
+    "https://i.pinimg.com/736x/47/2b/da/472bdad63cbf523f7f7f7bfd14c02c62.jpg",
+    "https://i.pinimg.com/736x/84/b7/42/84b74259741312ca66b0014e01ee9dae.jpg",
+    "https://i.pinimg.com/736x/b9/c7/17/b9c7176009d25fee7d59f07affe74475.jpg",
+    "https://i.pinimg.com/736x/86/46/c7/8646c7be0542a53a24aca2f7f9d15d73.jpg"
+  ],
+  "category": "Geode Art",
+  "featured": true,
+  "note": "Since each piece is handmade, it won’t look exactly like the picture. There might be small differences—but it could turn out even better!",
+  "dimensions": "18*24 Inches",
+  "materials": [
+    ""
+  ],
+  "inStock": true,
+  "faqs": [
+    {
+      "question": "Description",
+      "answer": "This handcrafted geode art piece is a perfect blend of elegance and artistic expression. Inspired by the natural beauty of crystal formations, it brings a calming and luxurious presence to your space. The flowing patterns and embedded stones create a mesmerizing effect that captures attention and soothes the soul.  Every artwork is made with care and attention to detail, ensuring no two pieces are ever the same. Whether placed in a living room, office, or spiritual space, it becomes an instant focal point and conversation starter. ✨ Also available in custom sizes and styles as per your preference."
+    },
+    {
+      "question": "Dimension, Timeline & Material",
+      "answer": "Dimensions:  Available in 18*24 inch, 24*36 inch, and 36*48 inch. If you need a larger size or a custom dimension, feel free to contact us directly on WhatsApp. Timelines:  Please allow 15–20 working days for delivery. Each artwork is made to order, and resin takes time to fully cure. We take this time to ensure you receive a beautifully finished, high-quality piece. Placement:  This artwork is designed exclusively for wall display. It comes ready to hang and includes a mounting kit for easy installation. Perfect for living rooms, bedrooms, entryways, or any wall that needs a stunning focal point."
+    },
+    {
+      "question": "Return & Refund Policy",
+      "answer": "Return and Refund Policy Overview:  All our products are handmade and made-to-order. We only accept returns if the product arrives damaged.  Returns for Damaged Products:  If your product arrives damaged, you must tell us within 2-3 days of delivery. Send us a message on WhatsApp at +91-9414343709 or email us at mediaengrave@gmail.com with details and pictures. We suggest making a video while unboxing the product to help us understand what went wrong (this is just advice, not required). Send the damaged product back to Khara Kuaa, 58, 100 Feet Rd, near Subha Aashiyana Complex, Shobhagpura, Udaipur, Rajasthan 313001 in its original box. We will cover the return shipping cost. We’ll replace it with a new one. No money refunds will be given. No Returns for Change of Mind:  Since each product is made just for you, we don’t accept returns if you change your mind. If You Damage the Product:  If you damage the product, we can try to fix it for an extra cost. Contact us to know the repair price. You’ll pay for shipping to us and back."
+    },
+    {
+      "question": "Contact Us",
+      "answer": "Reach us on WhatsApp at +91-9414343709 or email mediaengrave@gmail.com for help!"
+    }
+  ],
+  "thicknessOptions": [
+    {
+      "value": "18*24 Inches",
+      "priceModifier": 0
+    },
+    {
+      "value": "24*36 Inches",
+      "priceModifier": 3600
+    },
+    {
+      "value": "36*48 Inches",
+      "priceModifier": 7200
+    }
+  ],
+  "colorOptions": [
+    {
+      "value": "",
+      "priceModifier": 0
+    }
+  ]
+},
+{
+  "id": "P5",
+  "name": "Geode Art – Stone Sparkle",
+  "description": "A mesmerizing handcrafted resin geode artwork featuring bold plum tones, golden highlights, and raw crystal textures – the perfect blend of elegance and statement art.",
+  "price": 3700,
+  "images": [
+    "https://i.pinimg.com/736x/0b/ff/3c/0bff3cf541709da93b890860a5c0f36d.jpg",
+    "https://i.pinimg.com/736x/8c/47/cd/8c47cd38dbb4779153521103d39c939e.jpg",
+    "https://i.pinimg.com/736x/f0/bc/87/f0bc87eab8bd4993b4ab23b8e4b6ff1f.jpg",
+    "https://i.pinimg.com/736x/59/89/7e/59897e9cef669b6eef4664c54bcadf13.jpg",
+    "https://i.pinimg.com/736x/18/cf/f2/18cff2f18a64129a397bc3e55b8be62b.jpg",
+    "https://i.pinimg.com/736x/14/f0/ca/14f0ca8c70934d13d1b85fc93aa2c2ab.jpg"
+  ],
+  "category": "Geode Art",
+  "featured": true,
+  "note": "Since each piece is handmade, it won’t look exactly like the picture. There might be small differences—but it could turn out even better!",
+  "dimensions": "18*24 Inches",
+  "materials": [
+    ""
+  ],
+  "inStock": true,
+  "faqs": [
+    {
+      "question": "Description",
+      "answer": "Bring luxurious energy and artistic depth into your space with Geode Art – Majestic Plum Crystal Flow. This handcrafted resin geode masterpiece features stunning layers of deep plum, black, ivory, and hints of metallic gold. The artwork captures the raw beauty of natural geodes, brought to life with real crystal chips and textured resin that shimmer from every angle.  Each element is thoughtfully placed to create movement and depth, making it more than just wall art — it’s a conversation piece. Whether you're styling a cozy corner, enhancing your living room, or adding elegance to your office, this art piece elevates the ambiance with its bold presence and refined charm."
+    },
+    {
+      "question": "Dimension, Timeline & Material",
+      "answer": "Dimensions:  Available in 18*24 inch, 24*36 inch, and 36*48 inch. If you need a larger size or a custom dimension, feel free to contact us directly on WhatsApp. Timelines:  Please allow 15–20 working days for delivery. Each artwork is made to order, and resin takes time to fully cure. We take this time to ensure you receive a beautifully finished, high-quality piece. Placement:  This artwork is designed exclusively for wall display. It comes ready to hang and includes a mounting kit for easy installation. Perfect for living rooms, bedrooms, entryways, or any wall that needs a stunning focal point."
+    },
+    {
+      "question": "Return & Refund Policy",
+      "answer": "Return and Refund Policy Overview:  All our products are handmade and made-to-order. We only accept returns if the product arrives damaged.  Returns for Damaged Products:  If your product arrives damaged, you must tell us within 2-3 days of delivery. Send us a message on WhatsApp at +91-9414343709 or email us at mediaengrave@gmail.com with details and pictures. We suggest making a video while unboxing the product to help us understand what went wrong (this is just advice, not required). Send the damaged product back to Khara Kuaa, 58, 100 Feet Rd, near Subha Aashiyana Complex, Shobhagpura, Udaipur, Rajasthan 313001 in its original box. We will cover the return shipping cost. We’ll replace it with a new one. No money refunds will be given. No Returns for Change of Mind:  Since each product is made just for you, we don’t accept returns if you change your mind. If You Damage the Product:  If you damage the product, we can try to fix it for an extra cost. Contact us to know the repair price. You’ll pay for shipping to us and back."
+    },
+    {
+      "question": "Contact Us",
+      "answer": "Reach us on WhatsApp at +91-9414343709 or email mediaengrave@gmail.com for help!"
+    }
+  ],
+  "thicknessOptions": [
+    {
+      "value": "18*24 Inches",
+      "priceModifier": 0
+    },
+    {
+      "value": "24*36 Inches",
+      "priceModifier": 3600
+    },
+    {
+      "value": "36*48 Inches",
+      "priceModifier": 7200
+    }
+  ],
+  "colorOptions": [
+    {
+      "value": "",
+      "priceModifier": 0
+    }
+  ]
+},
+{
+  "id": "P6",
+  "name": "Varmala Preservation Frame - Pink Shade ",
+  "description": "A handcrafted varmala preservation frame made with real wedding garland flowers — a timeless keepsake to celebrate eternal love and cherished memories.",
+  "price": 2000,
+  "images": [
+    "https://i.pinimg.com/736x/53/55/0e/53550e5a2cec974e6527936cb6fa5a64.jpg",
+    "https://i.pinimg.com/736x/e3/3f/f4/e33ff4f794ac8f0c11c7f9e838bd5bb8.jpg",
+    "https://i.pinimg.com/736x/e1/c6/42/e1c642b63bf8c6409c1c84bc06d9adc3.jpg",
+    "https://i.pinimg.com/736x/83/60/77/836077e6e3bceb8c2e8353bb4001d2df.jpg"
+  ],
+  "category": "Varmala Preservation Frames",
+  "featured": false,
+  "note": "Personalize this frame with up to 2 photos, your names, and the date of your wedding or any special occasion — making it a truly one-of-a-kind keepsake.",
+  "dimensions": "8 inch round (in diameter) & 20 mm thickness",
+  "materials": [
+    ""
+  ],
+  "inStock": true,
+  "faqs": [
+    {
+      "question": "Description ",
+      "answer": "Keep the memory of your big day alive with this beautiful Varmala Preservation Frame. Made using the real flowers from your varmala, this frame is a special way to remember your wedding forever.  One half of the frame has the dried flowers carefully set in clear resin, and the other half shows your wedding photos, names, and date, all beautifully arranged on a soft pink background with golden writing and cute heart designs."
+    },
+    {
+      "question": "Timeline",
+      "answer": "Your varmala preservation frame will be delivered in 12–14 business days.  We take around 7–8 days to carefully dry and preserve your real varmala flowers. After that, 1–2 more days are spent on the final touches, like polishing and detailing, to make your frame perfect.  Every piece is made with love and care, so we don’t rush the process. From flower preservation to the finishing shine, each frame has its own journey.  We promise — the wait will be worth it."
+    },
+    {
+      "question": "Return & Refund Policy",
+      "answer": "Return and Refund Policy Overview:  All our products are handmade and made-to-order. We only accept returns if the product arrives damaged.  Returns for Damaged Products:  If your product arrives damaged, you must tell us within 2-3 days of delivery. Send us a message on WhatsApp at +91-9414343709 or email us at mediaengrave@gmail.com with details and pictures. We suggest making a video while unboxing the product to help us understand what went wrong (this is just advice, not required). Send the damaged product back to Khara Kuaa, 58, 100 Feet Rd, near Subha Aashiyana Complex, Shobhagpura, Udaipur, Rajasthan 313001 in its original box. We will cover the return shipping cost. We’ll replace it with a new one. No money refunds will be given. No Returns for Change of Mind:  Since each product is made just for you, we don’t accept returns if you change your mind. If You Damage the Product:  If you damage the product, we can try to fix it for an extra cost. Contact us to know the repair price. You’ll pay for shipping to us and back."
+    },
+    {
+      "question": "Contact us ",
+      "answer": "Reach us on WhatsApp at +91-9414343709 or email mediaengrave@gmail.com for help!"
+    }
+  ],
+  "thicknessOptions": [
+    {
+      "value": "8 inch round (in diameter) & 40 mm thickness",
+      "priceModifier": 1500
+    },
+    {
+      "value": "10 inch round (in diameter) & 20 mm thickness",
+      "priceModifier": 1000
+    },
+    {
+      "value": "10 inch round (in diameter) & 40 mm thickness",
+      "priceModifier": 2500
+    },
+    {
+      "value": "12 inch round (in diameter) & 20 mm thickness",
+      "priceModifier":1500
+    },
+    {
+      "value": "12 inch round (in diameter) & 40 mm thickness",
+      "priceModifier": 3500
+    }
+  ],
+},
+ {
     id: "p1",
     name: "Ocean Waves Resin Art",
     description: "Hand-crafted resin art piece capturing the serene beauty of ocean waves. Each piece is unique with swirls of blue, teal, and white creating a mesmerizing effect that brings the calming essence of the ocean into your space.",
@@ -11,7 +396,7 @@ export const products: Product[] = [
       "https://images.pexels.com/photos/3738909/pexels-photo-3738909.jpeg"
     ],
     category: "c1",
-    featured: true,
+    featured: false,
     note: "har chiz unique",
     dimensions: "12\" x 16\"",
     materials: ["Epoxy resin", "Alcohol ink", "Canvas"],
@@ -37,139 +422,7 @@ export const products: Product[] = [
       { value: "White Wave", priceModifier: 15 }
     ]
   },
-  {
-    id: "p2",
-    name: "Geode Coaster Set",
-    description: "Set of 4 handmade resin coasters inspired by natural geode formations. Each coaster features vibrant colors with gold accents, creating a stunning centerpiece for your coffee table while protecting your furniture.",
-    price: 49.99,
-    images: [
-      "https://images.pexels.com/photos/5232649/pexels-photo-5232649.jpeg",
-      "https://images.pexels.com/photos/5232701/pexels-photo-5232701.jpeg"
-    ],
-    category: "c1",
-    featured: false,
-    note: "har chiz unique",
-    dimensions: "4\" diameter each",
-    materials: ["Epoxy resin", "Mica powder", "Gold leaf"],
-    inStock: true,
-    faqs: [
-      {
-        question: "What materials are used in this product?",
-        answer: "This product is made from epoxy resin, alcohol ink, and canvas."
-      },
-      {
-        question: "How should I care for this item?",
-        answer: "Keep it away from direct sunlight and clean with a soft cloth."
-      }
-    ]
-  },
-  {
-    id: "p4",
-    name: "Resin River Serving Board",
-    description: "Handcrafted wooden serving board with a stunning blue resin river flowing through the center. Perfect for entertaining or as a statement piece in your kitchen. Each board is unique with natural wood grain patterns.",
-    price: 89.99,
-    note: "har chiz unique",
-    images: [
-      "https://images.pexels.com/photos/5232694/pexels-photo-5232694.jpeg",
-      "https://images.pexels.com/photos/5232654/pexels-photo-5232654.jpeg"
-    ],
-    category: "c2",
-    featured: false,
-    dimensions: "12\" x 20\"",
-    materials: ["Reclaimed wood", "Epoxy resin", "Food-safe finish"],
-    inStock: true,
-    faqs: [
-      {
-        question: "What materials are used in this product?",
-        answer: "This product is made from epoxy resin, alcohol ink, and canvas."
-      },
-      {
-        question: "How should I care for this item?",
-        answer: "Keep it away from direct sunlight and clean with a soft cloth."
-      }
-    ]
-  },
-  {
-    id: "p5",
-    name: "Varmala Preservation Frame – Eternal Love Encased in Beauty",
-    description: `Celebrate your wedding day forever with our Varmala Preservation Frame, handcrafted using the real flowers from your varmala. This elegant round frame captures the essence of one of the most meaningful moments of your life—your wedding—and transforms it into a timeless keepsake.\n\nWhat makes it truly special is that you can personalize it with your own photo, names, wedding date, and a short quote that holds meaning for you both. Each bloom is preserved with care and adorned with delicate pearls and golden accents, symbolizing the beauty and strength of your bond.\n\nPerfect as a keepsake for your home or a heartfelt wedding gift, this frame is more than decor—it's a piece of your love story, preserved for a lifetime.\n\n📅 Customizable with Your Wedding Date\n📸 Add Your Favorite Photo\n💑 Personalize with Names & a Meaningful Quote\n💐 Crafted from Your Actual Varmala Flowers\n💛 A Symbol of Timeless Love & Memory`,
-    price: 2000, 
-    note: "har chiz unique",
-    images: [
-      "/varmala1.jpg",
-      "/varmala2.jpg",
-      "/varmala3.jpg"
-    ],
-    category: "c2",
-    featured: true,
-    dimensions: "12\" x 20\"",
-    materials: ["Reclaimed wood", "Epoxy resin", "Food-safe finish"],
-    inStock: true,
-    faqs: [
-      {
-        question: "What materials are used in this product?",
-        answer: "This product is made from epoxy resin, alcohol ink, and canvas."
-      },
-      {
-        question: "How should I care for this item?",
-        answer: "Keep it away from direct sunlight and clean with a soft cloth."
-      }
-    ]
-  },
-  {
-    id: "p6",
-    name: "Resin Wall Clock – Blue, White & Wooden Elegance in Every Tick",
-    description: `Add a touch of timeless artistry to your space with our handcrafted Resin Wall Clock in blue, white, and natural wood finish. This beautifully designed epoxy resin wall clock combines rustic charm with modern elegance, making it a standout piece of home decor or office wall art.\n\nCrafted with rich wooden textures and flowing resin patterns, each clock brings an antique yet contemporary look to your walls. The soothing blue and white resin tones paired with golden clock hands create a visually striking contrast that fits effortlessly into boho, modern, rustic, or minimalist interiors.\n\n✨ Please Note: As each clock is completely handmade, you will not receive the exact piece shown in the image. But rest assured—your clock will be one-of-a-kind, crafted with the same artistry and often even more stunning in design.\n\n🪵 Blue & White Resin with Natural Wooden Texture\n🖐️ Handmade Wall Clock – Unique Every Time\n🕰️ Functional Resin Art for Living Room, Bedroom, or Office\n🎁 Perfect Gift for Housewarming, Anniversaries, or Art Lovers\n\nKeywords: Resin wall clock, epoxy resin decor, handmade clock, blue and white wall art, rustic wood clock, unique home decor, modern resin timepiece, living room wall clock, boho clock, artisan wall art`,
-    price: 32000, 
-    images: [
-      "/clock1.jpg",
-      "/clock2.jpg",
-      "/clock3.jpg"
-    ],
-    category: "c3",
-    note: "har chiz unique",
-    featured: true,
-    dimensions: "12\" x 20\"",
-    materials: ["Reclaimed wood", "Epoxy resin", "Food-safe finish"],
-    inStock: true,
-    faqs: [
-      {
-        question: "What materials are used in this product?",
-        answer: "This product is made from epoxy resin, alcohol ink, and canvas."
-      },
-      {
-        question: "How should I care for this item?",
-        answer: "Keep it away from direct sunlight and clean with a soft cloth."
-      }
-    ]
-  },
-  {
-    id: "p7",
-    name: "Namokar Mantra Resin Art Frame – Ocean-Inspired Spiritual Elegance",
-    description: `Celebrate your faith through art with our Namokar Mantra Resin Frame, designed to radiate peace, devotion, and artistic beauty. Set against a breathtaking backdrop of ocean waves crafted in resin, this unique piece combines spiritual meaning with aesthetic elegance.\n\nThe frame features the revered Namokar Mantra in golden lettering, highlighted with a golden metallic border and decorated with real seashells, symbolizing serenity and grounding. It's a perfect spiritual showpiece for your living room, meditation space, or prayer corner, and a beautiful way to express your religious devotion through decor.\n\n🌊 Ocean wave background in rich resin tones\n🌟 Golden border and metallic script for a luxurious finish\n🪬 Showcase your religious faith with artistic beauty\n\n✨ Customization Available: Personalize it with your own religious chants or prayers—from Hanuman Chalisa, Shaanti Mantra, to Muslim Duas or Quranic verses. We tailor it to reflect your spiritual path.\n\n🔔 Note: Each frame is entirely handmade, meaning your piece will be unique and may not exactly match the one shown in the image—but it will be equally, if not more, stunning.\n\n🧘‍♀️ Perfect for prayer rooms, meditation corners, or as a spiritual gift\n🎁 Thoughtful gift idea for festivals, housewarmings, or religious ceremonies\n🖐️ Handcrafted resin artwork – truly one of a kind\n\nKeywords: Namokar mantra frame, resin spiritual decor, handmade religious art, ocean theme resin frame, personalized mantra art, Jain home decor, Hindu prayer frame, Muslim wall art, Hanuman Chalisa wall decor, resin ocean waves mantra.`,
-    price: 4200,
-    note: "har chiz unique",
-    images: [
-      "/navkar1.jpeg",
-      "/navkar2.jpeg",
-      "/navkar3.jpeg"
-    ],
-    category: "c3",
-    featured: true,
-    dimensions: "12\" x 20\"",
-    materials: ["Reclaimed wood", "Epoxy resin", "Food-safe finish"],
-    inStock: true,
-    faqs: [
-      {
-        question: "What materials are used in this product?",
-        answer: "This product is made from epoxy resin, alcohol ink, and canvas."
-      },
-      {
-        question: "How should I care for this item?",
-        answer: "Keep it away from direct sunlight and clean with a soft cloth."
-      }
-    ]
-  },
+
 ];
 
 export const categories: Category[] = [
@@ -190,7 +443,26 @@ export const categories: Category[] = [
     name: "Art Prints",
     description: "Premium prints of original artwork",
     image: "/navkar1.jpeg"
+  },
+   {
+    id: "Varmala Preservation Frame",
+    name: "Varmala Preservation Frame",
+    description: "Stunning resin art pieces to elevate your space",
+    image: "https://images.pexels.com/photos/3631430/pexels-photo-3631430.jpeg"
+  },
+  {
+    id: "Mantra Frames",
+    name: "Mantra Frames",
+    description: "Functional art pieces for your living space",
+    image: "/clock1.jpg"
+  },
+  {
+    id: "Geode Art",
+    name: "Geode Art",
+    description: "Premium prints of original artwork",
+    image: "/navkar1.jpeg"
   }
+
 ];
 
 export const getFeaturedProducts = (): Product[] => {

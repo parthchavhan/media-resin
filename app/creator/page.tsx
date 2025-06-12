@@ -97,23 +97,23 @@ const ProductForm: React.FC = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="max-w-lg mx-auto p-4 bg-white rounded-lg shadow-md">
-      <h2 className="text-2xl font-bold mb-4">Create Product</h2>
+    <form onSubmit={handleSubmit} className="max-w-lg mx-auto p-6 bg-white rounded-lg shadow-lg">
+      <h2 className="text-2xl font-bold mb-6 text-center">Create Product</h2>
       <div className="mb-4">
         <label className="block text-sm font-medium text-gray-700">ID:</label>
-        <input type="text" value={product.id} onChange={(e) => handleChange(e, 'id')} required className="mt-1 block w-full border border-gray-300 rounded-md p-2" />
+        <input type="text" value={product.id} onChange={(e) => handleChange(e, 'id')} required className="mt-1 block w-full border border-gray-300 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-blue-500" />
       </div>
       <div className="mb-4">
         <label className="block text-sm font-medium text-gray-700">Name:</label>
-        <input type="text" value={product.name} onChange={(e) => handleChange(e, 'name')} required className="mt-1 block w-full border border-gray-300 rounded-md p-2" />
+        <input type="text" value={product.name} onChange={(e) => handleChange(e, 'name')} required className="mt-1 block w-full border border-gray-300 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-blue-500" />
       </div>
       <div className="mb-4">
         <label className="block text-sm font-medium text-gray-700">Description:</label>
-        <textarea value={product.description} onChange={(e) => handleChange(e, 'description')} required className="mt-1 block w-full border border-gray-300 rounded-md p-2" />
+        <textarea value={product.description} onChange={(e) => handleChange(e, 'description')} required className="mt-1 block w-full border border-gray-300 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-blue-500" />
       </div>
       <div className="mb-4">
         <label className="block text-sm font-medium text-gray-700">Price:</label>
-        <input type="number" value={product.price} onChange={(e) => handleChange(e, 'price')} required className="mt-1 block w-full border border-gray-300 rounded-md p-2" />
+        <input type="number" value={product.price} onChange={(e) => handleChange(e, 'price')} required className="mt-1 block w-full border border-gray-300 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-blue-500" />
       </div>
       <div className="mb-4">
         <label className="block text-sm font-medium text-gray-700">Images:</label>
@@ -124,15 +124,15 @@ const ProductForm: React.FC = () => {
               placeholder="Image URL"
               value={image}
               onChange={(e) => handleArrayChange(e, index, 'images')}
-              className="block w-full border border-gray-300 rounded-md p-2"
+              className="block w-full border border-gray-300 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
           </div>
         ))}
-        <button type="button" onClick={addImage} className="mt-2 text-blue-500">+ Add Image</button>
+        <button type="button" onClick={addImage} className="mt-2 text-blue-500 hover:underline">+ Add Image</button>
       </div>
       <div className="mb-4">
         <label className="block text-sm font-medium text-gray-700">Category:</label>
-        <input type="text" value={product.category} onChange={(e) => handleChange(e, 'category')} required className="mt-1 block w-full border border-gray-300 rounded-md p-2" />
+        <input type="text" value={product.category} onChange={(e) => handleChange(e, 'category')} required className="mt-1 block w-full border border-gray-300 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-blue-500" />
       </div>
       <div className="mb-4">
         <label className="block text-sm font-medium text-gray-700">Featured:</label>
@@ -140,15 +140,15 @@ const ProductForm: React.FC = () => {
       </div>
       <div className="mb-4">
         <label className="block text-sm font-medium text-gray-700">Note:</label>
-        <input type="text" value={product.note} onChange={(e) => handleChange(e, 'note')} className="mt-1 block w-full border border-gray-300 rounded-md p-2" />
+        <input type="text" value={product.note} onChange={(e) => handleChange(e, 'note')} className="mt-1 block w-full border border-gray-300 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-blue-500" />
       </div>
       <div className="mb-4">
         <label className="block text-sm font-medium text-gray-700">Dimensions:</label>
-        <input type="text" value={product.dimensions} onChange={(e) => handleChange(e, 'dimensions')} className="mt-1 block w-full border border-gray-300 rounded-md p-2" />
+        <input type="text" value={product.dimensions} onChange={(e) => handleChange(e, 'dimensions')} className="mt-1 block w-full border border-gray-300 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-blue-500" />
       </div>
       <div className="mb-4">
         <label className="block text-sm font-medium text-gray-700">Materials (comma-separated):</label>
-        <input type="text" value={product.materials.join(',')} onChange={(e) => handleArrayChange(e, 0, 'materials')} className="mt-1 block w-full border border-gray-300 rounded-md p-2" />
+        <input type="text" value={product.materials.join(',')} onChange={(e) => handleArrayChange(e, 0, 'materials')} className="mt-1 block w-full border border-gray-300 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-blue-500" />
       </div>
       <div className="mb-4">
         <label className="block text-sm font-medium text-gray-700">In Stock:</label>
@@ -163,18 +163,18 @@ const ProductForm: React.FC = () => {
               placeholder="Question"
               value={faq.question}
               onChange={(e) => handleFAQChange(e, index, 'question')}
-              className="block w-full border border-gray-300 rounded-md p-2"
+              className="block w-full border border-gray-300 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
             <input
               type="text"
               placeholder="Answer"
               value={faq.answer}
               onChange={(e) => handleFAQChange(e, index, 'answer')}
-              className="block w-full border border-gray-300 rounded-md p-2"
+              className="block w-full border border-gray-300 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
           </div>
         ))}
-        <button type="button" onClick={addFAQ} className="mt-2 text-blue-500">+ Add FAQ</button>
+        <button type="button" onClick={addFAQ} className="mt-2 text-blue-500 hover:underline">+ Add FAQ</button>
       </div>
       <div className="mb-4">
         <label className="block text-sm font-medium text-gray-700">Thickness Options:</label>
@@ -185,18 +185,18 @@ const ProductForm: React.FC = () => {
               placeholder="Thickness"
               value={option.value}
               onChange={(e) => handleThicknessChange(e, index, 'value')}
-              className="block w-full border border-gray-300 rounded-md p-2"
+              className="block w-full border border-gray-300 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
             <input
               type="number"
               placeholder="Price Modifier"
               value={option.priceModifier}
               onChange={(e) => handleThicknessChange(e, index, 'priceModifier')}
-              className="block w-full border border-gray-300 rounded-md p-2"
+              className="block w-full border border-gray-300 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
           </div>
         ))}
-        <button type="button" onClick={addThicknessOption} className="mt-2 text-blue-500">+ Add Thickness Option</button>
+        <button type="button" onClick={addThicknessOption} className="mt-2 text-blue-500 hover:underline">+ Add Thickness Option</button>
       </div>
       <div className="mb-4">
         <label className="block text-sm font-medium text-gray-700">Color Options:</label>
@@ -207,20 +207,20 @@ const ProductForm: React.FC = () => {
               placeholder="Color"
               value={option.value}
               onChange={(e) => handleArrayChange(e, index, 'colorOptions')}
-              className="block w-full border border-gray-300 rounded-md p-2"
+              className="block w-full border border-gray-300 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
             <input
               type="number"
               placeholder="Price Modifier"
               value={option.priceModifier}
               onChange={(e) => handleArrayChange(e, index, 'colorOptions')}
-              className="block w-full border border-gray-300 rounded-md p-2"
+              className="block w-full border border-gray-300 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
           </div>
         ))}
-        <button type="button" onClick={addColorOption} className="mt-2 text-blue-500">+ Add Color Option</button>
+        <button type="button" onClick={addColorOption} className="mt-2 text-blue-500 hover:underline">+ Add Color Option</button>
       </div>
-      <button type="submit" className="mt-4 bg-blue-500 text-white rounded-md p-2">Generate JSON</button>
+      <button type="submit" className="mt-4 bg-blue-500 text-white rounded-md p-2 hover:bg-blue-600 transition duration-200">Generate JSON</button>
 
       {/* Text area to display the generated JSON */}
       <div className="mt-4">
@@ -228,7 +228,7 @@ const ProductForm: React.FC = () => {
         <textarea
           value={jsonOutput}
           readOnly
-          className="mt-1 block w-full border border-gray-300 rounded-md p-2 h-40"
+          className="mt-1 block w-full border border-gray-300 rounded-md p-2 h-40 focus:outline-none focus:ring-2 focus:ring-blue-500"
         />
       </div>
     </form>

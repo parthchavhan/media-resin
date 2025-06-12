@@ -56,7 +56,7 @@ export default function Navbar() {
       )}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Top section with logo centered and mobile actions on right */}
-          <div className="flex items-center justify-between py-4">
+          <div className="flex items-center justify-between py-1">
             {/* Left spacer for desktop, empty for mobile */}
             <div className="hidden lg:block w-24"></div>
             
@@ -65,9 +65,9 @@ export default function Navbar() {
               <Image 
                 src="/logo.png"
                 alt="Media Resin Studio"
-                width={180}
-                height={180}
-                className="w-auto h-20 lg:h-28 transition-transform duration-200 group-hover:scale-105"
+                width={100}
+                height={100}
+                className="w-auto h-20 lg:h-22 transition-transform duration-200 group-hover:scale-105"
                 priority
               />
             </Link>
