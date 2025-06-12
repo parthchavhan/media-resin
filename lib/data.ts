@@ -4,7 +4,7 @@ export const products: Product[] = [
  
   {
   "id": "P1",
-  "name": "Resin Geode Art – Blue and White Crystal Wall Decor ",
+  "name": "Geode Art – Sea & Sand Magic ",
   "description": "Elegant handmade resin geode art in stunning blue, white, and gold tones, featuring real crystals and marble stones. Perfect for wall decor, tabletops, or gifting.",
   "price": 2300,
   "images": [

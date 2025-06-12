@@ -3,27 +3,18 @@ import Link from 'next/link';
 import ProductCard from '@/components/products/ProductCard';
 import { notFound } from 'next/navigation';
 
-// Helper to slugify category IDs for URL safety
-function slugify(text: string) {
-  return text
-    .toLowerCase()
-    .replace(/(\d+)\/(\d+)/g, '$1$2')
-    .replace(/['']/g, '')
-    .replace(/[^a-z0-9]+/g, '-')
-    .replace(/^-+|-+$/g, '');
-}
-
 interface CategoryPageProps {
   params: { id: string };
 }
 
 const CategoryPage = ({ params }: CategoryPageProps) => {
-  const { id: slug } = params;
-  // Find matching category by slugified id
-  const category = categories.find((cat) => slugify(cat.id) === slug);
-  if (!category) return notFound();
+  const { id } = params;
+  const category = categories.find((cat) => cat.id === id);
+  const products = getProductsByCategory(id);
 
-  const products = getProductsByCategory(category.id);
+  if (!category) {
+    return notFound();
+  }
 
   return (
     <div className="container px-4 py-10 space-y-6 max-w-7xl mx-auto">
@@ -36,8 +27,9 @@ const CategoryPage = ({ params }: CategoryPageProps) => {
       {/* Product Section */}
       <section>
         <h2 className="text-2xl font-semibold text-gray-800 dark:text-gray-100 mb-4">Products</h2>
+
         {products.length > 0 ? (
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {products.map((product) => (
               <ProductCard key={product.id} product={product} />
             ))}
@@ -61,6 +53,5 @@ export default CategoryPage;
 
 // For static generation with output: export, generate all category paths
 export async function generateStaticParams() {
-  return categories.map((category) => ({ id: slugify(category.id) }));
+  return categories.map((category) => ({ id: category.id }));
 }
-
