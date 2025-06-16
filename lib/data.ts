@@ -335,7 +335,7 @@ export const products: Product[] = [
     "https://i.pinimg.com/736x/83/60/77/836077e6e3bceb8c2e8353bb4001d2df.jpg"
   ],
   "category": "varmala-preservation-frames",
-  "featured": false,
+  "featured": true,
   "note": "Personalize this frame with up to 2 photos, your names, and the date of your wedding or any special occasion — making it a truly one-of-a-kind keepsake.",
   "dimensions": "8 inch round (in diameter) & 20 mm thickness",
   "inStock": true,

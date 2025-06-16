@@ -79,7 +79,7 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
       <HeroSection />
-
+     
       {trendingProductsData.length > 0 && <FeaturedProducts products={trendingProductsData} />}
 
       <FashionCollection

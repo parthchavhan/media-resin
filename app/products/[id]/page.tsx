@@ -2,6 +2,7 @@
 import { getProductById, products } from "@/lib/data";
 import ProductDetail from "@/components/products/ProductDetail";
 import Faq02 from "@/components/kokonutui/faq-02"; // Import your FAQ component
+import ProductD from "@/components/products/ProductD";
 
 // This function generates the static parameters for the dynamic route
 export const generateStaticParams = async () => {
@@ -30,6 +31,13 @@ const ProductPage = async ({ params }: { params: Params }) => {
           Browse All Products
         </a>
       </div>
+    );
+  }
+
+  // Check if the id is 'varmala-preservation-frame'
+  if (params.id === 'P6') {
+    return (
+      <ProductD product={product} />
     );
   }
 

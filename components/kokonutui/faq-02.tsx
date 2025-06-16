@@ -9,15 +9,15 @@ interface FAQItemProps {
   question: string
   answer: string
   index: number
+  isOpen: boolean
+  onToggle: (index: number) => void
 }
 
 interface Faq02Props {
-  faqs: Omit<FAQItemProps, "index">[]
+  faqs: Omit<FAQItemProps, "index" | "isOpen" | "onToggle">[]
 }
 
-function FAQItem({ question, answer, index }: FAQItemProps) {
-  const [isOpen, setIsOpen] = useState(false)
-
+function FAQItem({ question, answer, index, isOpen, onToggle }: FAQItemProps) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 10 }}
@@ -37,7 +37,7 @@ function FAQItem({ question, answer, index }: FAQItemProps) {
     >
       <button
         type="button"
-        onClick={() => setIsOpen(!isOpen)}
+        onClick={() => onToggle(index)}
         className="w-full px-6 py-4 flex items-center justify-between gap-4"
       >
         <h3
@@ -121,6 +121,12 @@ function FAQItem({ question, answer, index }: FAQItemProps) {
 }
 
 function Faq02({ faqs }: Faq02Props) {
+  const [openIndex, setOpenIndex] = useState<number | null>(null)
+
+  const handleToggle = (index: number) => {
+    setOpenIndex(openIndex === index ? null : index)
+  }
+
   return (
     <section className="py-3 w-full bg-linear-to-b from-transparent via-gray-50/50 to-transparent dark:from-transparent dark:via-white/[0.02] dark:to-transparent">
       <div className="container px-4 mx-auto">
@@ -130,42 +136,15 @@ function Faq02({ faqs }: Faq02Props) {
           transition={{ duration: 0.5 }}
           className="max-w-2xl mx-auto text-center mb-12"
         >
-          {/* <h2 className="text-3xl font-semibold mb-3 bg-linear-to-r from-gray-900 via-gray-800 to-gray-900 dark:from-white dark:via-gray-100 dark:to-white bg-clip-text text-transparent">
-            Frequently Asked Questions
-          </h2>
-          <p className="text-sm text-gray-600 dark:text-gray-400">Everything you need to know about our platform</p> */}
-        </motion.div>
+          </motion.div>
 
         <div className="max-w-6xl mx-auto space-y-2">
           {faqs.map((faq, index) => (
-            <FAQItem key={index} {...{ ...faq, index }} />
+            <FAQItem key={index} {...{ ...faq, index, isOpen: openIndex === index, onToggle: handleToggle }} />
           ))}
         </div>
 
-        {/* <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.3 }}
-          className={cn("max-w-md mx-auto mt-12 p-6 rounded-lg text-center")}
-        >
-          <div className="inline-flex items-center justify-center p-1.5 rounded-full  mb-4">
-            <Mail className="h-4 w-4" />
-          </div>
-          <p className="text-sm font-medium text-gray-900 dark:text-white mb-1">Still have questions?</p>
-          <p className="text-xs text-gray-600 dark:text-gray-400 mb-4">We're here to help you</p>
-          <button
-            type="button"
-            className={cn(
-              "px-4 py-2 text-sm rounded-md",
-              "bg-gray-900 dark:bg-white text-white dark:text-gray-900",
-              "hover:bg-gray-800 dark:hover:bg-gray-100",
-              "transition-colors duration-200",
-              "font-medium",
-            )}
-          >
-            Contact Support
-          </button>
-        </motion.div> */}
+     
       </div>
     </section>
   )
