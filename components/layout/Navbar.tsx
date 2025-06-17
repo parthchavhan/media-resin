@@ -53,12 +53,12 @@ export default function Navbar() {
       {/* Gray Line with Contact Info */}
       <div className="bg-gray-200 py-2">
         <div className="max-w-7xl mx-auto flex justify-end items-center px-4">
-          <span className="text-gray-600 px-4">WhatsApp: +1234567890</span>
+          <span className="text-gray-600 px-4">WhatsApp: +91-9414343709</span>
           <span className="flex items-center space-x-2">
-            <a href="https://www.instagram.com/yourhandle" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-blue-600">
+            <a href="https://www.instagram.com/mediaresin.studio" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-blue-600">
               <Instagram size={20} />
             </a>
-            <span className="text-gray-600">@yourhandle</span>
+            <span className="text-gray-600">@mediaresin.studio</span>
           </span>
         </div>
       </div>
