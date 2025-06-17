@@ -9,10 +9,10 @@ import FashionCollection from "./fashion-collection";
 
 // Sample data for the collections
 const womenCollection = {
-  title: "Girl's Collection",
+  title: "Mantra Frames",
   description:
     "Indulge in comfort and quality with our thoughtfully designed girl's collection.",
-  backgroundImage: "/girls-collections.webp",
+  backgroundImage: "/Mantra.jpg",
   products: [
     {
       id: "1",
@@ -39,7 +39,7 @@ const womenCollection = {
 };
 
 const menCollection = {
-  title: "Boys' Collection",
+  title: "Geode Art",
   description:
     "Define your style with our latest boys' collection. Designed for the confident man, these pieces blend contemporary design with classic appeal.",
   backgroundImage: "/boys-collection.webp",

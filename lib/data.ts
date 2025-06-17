@@ -1,7 +1,6 @@
 import { Product, Category } from "./types";
 
 export const products: Product[] = [
- 
   {
   "id": "P1",
   "name": "Geode Art – Sea & Sand Magic ",
@@ -18,7 +17,6 @@ export const products: Product[] = [
   "category": "geode-art",
   "featured": false,
   "note": "Since each piece is handmade, it won't look exactly like the picture. There might be small differences—but it could turn out even better!",
- 
   "inStock": true,
   "faqs": [
     {
