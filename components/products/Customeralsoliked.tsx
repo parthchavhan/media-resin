@@ -20,7 +20,7 @@ export default function Customeralsoliked({ currentCategory, currentProductId }:
 
   return (
     <section className="mt-12 pb-12">
-      <h2 className="text-2xl font-semibold mb-4">Related Products</h2>
+      <h2 className="text-2xl font-semibold mb-4">Customers also liked</h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
         {filteredProducts.map(product => (
           <ProductCard key={product.id} product={product} />
