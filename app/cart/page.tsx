@@ -4,6 +4,7 @@ import Link from "next/link";
 import { ShoppingBag, ArrowRight } from "lucide-react";
 import { useCart } from "@/context/CartContext";
 import CartItem from "@/components/cart/CartItem";
+import { Button } from "@/components/ui/button";
 
 export default function CartPage() {
   const { items, subtotal, clearCart } = useCart();
@@ -43,12 +44,12 @@ export default function CartPage() {
                 <h2 className="text-xl font-semibold">
                   Cart Items ({items.length})
                 </h2>
-                <button
+                <Button
                   onClick={clearCart}
                   className="text-red-500 text-sm hover:text-red-700 transition-colors"
                 >
                   Clear Cart
-                </button>
+                </Button>
               </div>
 
               <div className="space-y-0">

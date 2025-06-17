@@ -5,6 +5,7 @@ import Link from "next/link";
 import { ArrowLeft, Check } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { useCart } from "@/context/CartContext";
+import { Button } from "@/components/ui/button";
 
 export default function CheckoutPage() {
   const { items, subtotal, clearCart } = useCart();
@@ -283,7 +284,7 @@ export default function CheckoutPage() {
               </div>
               
               <div className="flex justify-end">
-                <button
+                <Button
                   type="submit"
                   disabled={loading}
                   className="px-8 py-3 bg-primary text-white rounded-md font-medium disabled:opacity-70 hover:bg-primary/90 transition-colors flex items-center"
@@ -296,7 +297,7 @@ export default function CheckoutPage() {
                   ) : (
                     "Complete Order"
                   )}
-                </button>
+                </Button>
               </div>
             </form>
           </div>

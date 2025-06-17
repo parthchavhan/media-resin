@@ -1,4 +1,5 @@
 "use client"
+import { Button } from '@/components/ui/button';
 import React, { useState } from 'react';
 
 export default function ContactUs() {
@@ -98,7 +99,7 @@ export default function ContactUs() {
             ></textarea>
   
             <div className="flex flex-row items-center justify-start">
-              <button
+              <Button
                 type="submit"
                 className="px-10 mt-8 py-2 bg-[#130F49] text-gray-50 font-light rounded-md text-lg flex flex-row items-center"
               >
@@ -116,7 +117,7 @@ export default function ContactUs() {
                     fill="currentColor"
                   />
                 </svg>
-              </button>
+              </Button>
             </div>
           </form>
         </div>

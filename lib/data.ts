@@ -334,10 +334,9 @@ export const products: Product[] = [
     "https://i.pinimg.com/736x/e1/c6/42/e1c642b63bf8c6409c1c84bc06d9adc3.jpg",
     "https://i.pinimg.com/736x/83/60/77/836077e6e3bceb8c2e8353bb4001d2df.jpg"
   ],
-  "category": "varmala-preservation-frames",
+  "category": "varmala-preservation-frame",
   "featured": true,
   "note": "Personalize this frame with up to 2 photos, your names, and the date of your wedding or any special occasion — making it a truly one-of-a-kind keepsake.",
-  "dimensions": "8 inch round (in diameter) & 20 mm thickness",
   "inStock": true,
   "faqs": [
     {
@@ -358,6 +357,10 @@ export const products: Product[] = [
     }
   ],
   "thicknessOptions": [
+    {
+      "value": "8 inch round (in diameter) & 20 mm thickness",
+      "priceModifier": 0
+    },
     {
       "value": "8 inch round (in diameter) & 40 mm thickness",
       "priceModifier": 1500
@@ -389,7 +392,7 @@ export const products: Product[] = [
       "https://images.pexels.com/photos/3631430/pexels-photo-3631430.jpeg",
       "https://images.pexels.com/photos/3738909/pexels-photo-3738909.jpeg"
     ],
-    category: "geode-art",
+    category: "mantra-frames",
     featured: false,
     note: "har chiz unique",
     dimensions: "12\" x 16\"",

@@ -1,8 +1,23 @@
+"use client"
+import { useState } from "react";
 import { products, categories } from "@/lib/data";
 import ProductCard from "@/components/products/ProductCard";
+import { Button } from "@/components/ui/button";
 
 // This component lists all products
 const AllProductsPage = () => {
+  const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
+
+  // Function to handle category selection
+  const handleCategorySelect = (categoryId: string | null) => {
+    setSelectedCategory(categoryId);
+  };
+
+  // Filter products based on selected category
+  const filteredProducts = selectedCategory
+    ? products.filter(product => product.category === selectedCategory)
+    : products;
+
   return (
     <div className="py-12">
       <div className="container mx-auto px-4">
@@ -10,21 +25,25 @@ const AllProductsPage = () => {
         <p className="text-gray-600 mb-8">Browse our handcrafted collection of unique resin art and decor</p>
         
         <div className="flex flex-wrap gap-2 mb-8">
-          <button className="px-4 py-2 bg-primary text-white rounded-md font-medium">
+          <Button 
+            onClick={() => handleCategorySelect(null)}
+            className="px-4 py-2 bg-primary text-white rounded-md font-medium"
+          >
             All Products
-          </button>
+          </Button>
           {categories.map((category) => (
-            <button 
+            <Button 
               key={category.id}
+              onClick={() => handleCategorySelect(category.id)}
               className="px-4 py-2 bg-gray-100 text-gray-800 rounded-md font-medium hover:bg-gray-200 transition-colors"
             >
               {category.name}
-            </button>
+            </Button>
           ))}
         </div>
         
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 xl:grid-cols-4 gap-6">
-          {products.map((product) => (
+          {filteredProducts.map((product) => (
             <ProductCard key={product.id} product={product} />
           ))}
         </div>

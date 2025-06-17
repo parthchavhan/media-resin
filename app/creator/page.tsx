@@ -1,4 +1,6 @@
 "use client"
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
 import React, { useState } from 'react';
 
 const ProductForm: React.FC = () => {
@@ -101,11 +103,11 @@ const ProductForm: React.FC = () => {
       <h2 className="text-2xl font-bold mb-6 text-center">Create Product</h2>
       <div className="mb-4">
         <label className="block text-sm font-medium text-gray-700">ID:</label>
-        <input type="text" value={product.id} onChange={(e) => handleChange(e, 'id')} required className="mt-1 block w-full border border-gray-300 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+        <Input type="text" value={product.id} onChange={(e) => handleChange(e, 'id')} required className="mt-1 block w-full border border-gray-300 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-blue-500" />
       </div>
       <div className="mb-4">
         <label className="block text-sm font-medium text-gray-700">Name:</label>
-        <input type="text" value={product.name} onChange={(e) => handleChange(e, 'name')} required className="mt-1 block w-full border border-gray-300 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+        <Input type="text" value={product.name} onChange={(e) => handleChange(e, 'name')} required className="mt-1 block w-full border border-gray-300 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-blue-500" />
       </div>
       <div className="mb-4">
         <label className="block text-sm font-medium text-gray-700">Description:</label>
@@ -113,13 +115,13 @@ const ProductForm: React.FC = () => {
       </div>
       <div className="mb-4">
         <label className="block text-sm font-medium text-gray-700">Price:</label>
-        <input type="number" value={product.price} onChange={(e) => handleChange(e, 'price')} required className="mt-1 block w-full border border-gray-300 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+        <Input type="number" value={product.price} onChange={(e) => handleChange(e, 'price')} required className="mt-1 block w-full border border-gray-300 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-blue-500" />
       </div>
       <div className="mb-4">
         <label className="block text-sm font-medium text-gray-700">Images:</label>
         {product.images.map((image, index) => (
           <div key={index} className="flex gap-2 mb-2">
-            <input
+            <Input
               type="text"
               placeholder="Image URL"
               value={image}
@@ -128,44 +130,44 @@ const ProductForm: React.FC = () => {
             />
           </div>
         ))}
-        <button type="button" onClick={addImage} className="mt-2 text-blue-500 hover:underline">+ Add Image</button>
+        <Button type="button" onClick={addImage} className="mt-2 text-blue-500 hover:underline">+ Add Image</Button>
       </div>
       <div className="mb-4">
         <label className="block text-sm font-medium text-gray-700">Category:</label>
-        <input type="text" value={product.category} onChange={(e) => handleChange(e, 'category')} required className="mt-1 block w-full border border-gray-300 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+        <Input type="text" value={product.category} onChange={(e) => handleChange(e, 'category')} required className="mt-1 block w-full border border-gray-300 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-blue-500" />
       </div>
       <div className="mb-4">
         <label className="block text-sm font-medium text-gray-700">Featured:</label>
-        <input type="checkbox" checked={product.featured} onChange={(e) => handleChange(e, 'featured')} className="mt-1" />
+        <Input type="checkbox" checked={product.featured} onChange={(e) => handleChange(e, 'featured')} className="mt-1" />
       </div>
       <div className="mb-4">
         <label className="block text-sm font-medium text-gray-700">Note:</label>
-        <input type="text" value={product.note} onChange={(e) => handleChange(e, 'note')} className="mt-1 block w-full border border-gray-300 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+        <Input type="text" value={product.note} onChange={(e) => handleChange(e, 'note')} className="mt-1 block w-full border border-gray-300 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-blue-500" />
       </div>
       <div className="mb-4">
         <label className="block text-sm font-medium text-gray-700">Dimensions:</label>
-        <input type="text" value={product.dimensions} onChange={(e) => handleChange(e, 'dimensions')} className="mt-1 block w-full border border-gray-300 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+        <Input type="text" value={product.dimensions} onChange={(e) => handleChange(e, 'dimensions')} className="mt-1 block w-full border border-gray-300 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-blue-500" />
       </div>
       <div className="mb-4">
         <label className="block text-sm font-medium text-gray-700">Materials (comma-separated):</label>
-        <input type="text" value={product.materials.join(',')} onChange={(e) => handleArrayChange(e, 0, 'materials')} className="mt-1 block w-full border border-gray-300 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+        <Input type="text" value={product.materials.join(',')} onChange={(e) => handleArrayChange(e, 0, 'materials')} className="mt-1 block w-full border border-gray-300 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-blue-500" />
       </div>
       <div className="mb-4">
         <label className="block text-sm font-medium text-gray-700">In Stock:</label>
-        <input type="checkbox" checked={product.inStock} onChange={(e) => handleChange(e, 'inStock')} className="mt-1" />
+        <Input type="checkbox" checked={product.inStock} onChange={(e) => handleChange(e, 'inStock')} className="mt-1" />
       </div>
       <div className="mb-4">
         <label className="block text-sm font-medium text-gray-700">FAQs:</label>
         {product.faqs.map((faq, index) => (
           <div key={index} className="flex gap-2 mb-2">
-            <input
+            <Input
               type="text"
               placeholder="Question"
               value={faq.question}
               onChange={(e) => handleFAQChange(e, index, 'question')}
               className="block w-full border border-gray-300 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
-            <input
+            <Input
               type="text"
               placeholder="Answer"
               value={faq.answer}
@@ -174,20 +176,20 @@ const ProductForm: React.FC = () => {
             />
           </div>
         ))}
-        <button type="button" onClick={addFAQ} className="mt-2 text-blue-500 hover:underline">+ Add FAQ</button>
+        <Button type="button" onClick={addFAQ} className="mt-2 text-blue-500 hover:underline">+ Add FAQ</Button>
       </div>
       <div className="mb-4">
         <label className="block text-sm font-medium text-gray-700">Thickness Options:</label>
         {product.thicknessOptions.map((option, index) => (
           <div key={index} className="flex gap-2 mb-2">
-            <input
+            <Input
               type="text"
               placeholder="Thickness"
               value={option.value}
               onChange={(e) => handleThicknessChange(e, index, 'value')}
               className="block w-full border border-gray-300 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
-            <input
+            <Input
               type="number"
               placeholder="Price Modifier"
               value={option.priceModifier}
@@ -196,20 +198,20 @@ const ProductForm: React.FC = () => {
             />
           </div>
         ))}
-        <button type="button" onClick={addThicknessOption} className="mt-2 text-blue-500 hover:underline">+ Add Thickness Option</button>
+        <Button type="button" onClick={addThicknessOption} className="mt-2 text-blue-500 hover:underline">+ Add Thickness Option</Button>
       </div>
       <div className="mb-4">
         <label className="block text-sm font-medium text-gray-700">Color Options:</label>
         {product.colorOptions.map((option, index) => (
           <div key={index} className="flex gap-2 mb-2">
-            <input
+            <Input
               type="text"
               placeholder="Color"
               value={option.value}
               onChange={(e) => handleArrayChange(e, index, 'colorOptions')}
               className="block w-full border border-gray-300 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
-            <input
+            <Input
               type="number"
               placeholder="Price Modifier"
               value={option.priceModifier}
@@ -218,9 +220,9 @@ const ProductForm: React.FC = () => {
             />
           </div>
         ))}
-        <button type="button" onClick={addColorOption} className="mt-2 text-blue-500 hover:underline">+ Add Color Option</button>
+        <Button type="button" onClick={addColorOption} className="mt-2 text-blue-500 hover:underline">+ Add Color Option</Button>
       </div>
-      <button type="submit" className="mt-4 bg-blue-500 text-white rounded-md p-2 hover:bg-blue-600 transition duration-200">Generate JSON</button>
+      <Button type="submit" className="mt-4 bg-blue-500 text-white rounded-md p-2 hover:bg-blue-600 transition duration-200">Generate JSON</Button>
 
       {/* Text area to display the generated JSON */}
       <div className="mt-4">

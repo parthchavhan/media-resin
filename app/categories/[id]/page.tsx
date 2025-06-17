@@ -37,7 +37,7 @@ const CategoryPage = ({ params }: CategoryPageProps) => {
       <section>
         <h2 className="text-2xl font-semibold text-gray-800 dark:text-gray-100 mb-4">Products</h2>
         {products.length > 0 ? (
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
             {products.map((product) => (
               <ProductCard key={product.id} product={product} />
             ))}
@@ -48,11 +48,11 @@ const CategoryPage = ({ params }: CategoryPageProps) => {
       </section>
 
       {/* Optional: Back to categories */}
-      <div>
+      {/* <div>
         <Link href="/categories">
           <span className="text-primary hover:underline text-sm">&larr; Back to categories</span>
         </Link>
-      </div>
+      </div> */}
     </div>
   );
 };
