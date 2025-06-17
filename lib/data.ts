@@ -17,11 +17,8 @@ export const products: Product[] = [
   ],
   "category": "geode-art",
   "featured": false,
-  "note": "Since each piece is handmade, it won’t look exactly like the picture. There might be small differences—but it could turn out even better!",
-  "dimensions": "",
-  "materials": [
-    ""
-  ],
+  "note": "Since each piece is handmade, it won't look exactly like the picture. There might be small differences—but it could turn out even better!",
+ 
   "inStock": true,
   "faqs": [
     {
@@ -38,12 +35,16 @@ export const products: Product[] = [
     },
     {
       "question": "Return & Refund Policy",
-      "answer": "Return and Refund Policy Overview:  All our products are handmade and made-to-order. We only accept returns if the product arrives damaged.  Returns for Damaged Products:  If your product arrives damaged, you must tell us within 2-3 days of delivery. Send us a message on WhatsApp at +91-9414343709 or email us at mediaengrave@gmail.com with details and pictures. We suggest making a video while unboxing the product to help us understand what went wrong (this is just advice, not required). Send the damaged product back to Khara Kuaa, 58, 100 Feet Rd, near Subha Aashiyana Complex, Shobhagpura, Udaipur, Rajasthan 313001 in its original box. We will cover the return shipping cost. We’ll replace it with a new one. No money refunds will be given. No Returns for Change of Mind:  Since each product is made just for you, we don’t accept returns if you change your mind. If You Damage the Product:  If you damage the product, we can try to fix it for an extra cost. Contact us to know the repair price. You’ll pay for shipping to us and back."
+      "answer": "Return and Refund Policy Overview:  All our products are handmade and made-to-order. We only accept returns if the product arrives damaged.  Returns for Damaged Products:  If your product arrives damaged, you must tell us within 2-3 days of delivery. Send us a message on WhatsApp at +91-9414343709 or email us at mediaengrave@gmail.com with details and pictures. We suggest making a video while unboxing the product to help us understand what went wrong (this is just advice, not required). Send the damaged product back to Khara Kuaa, 58, 100 Feet Rd, near Subha Aashiyana Complex, Shobhagpura, Udaipur, Rajasthan 313001 in its original box. We will cover the return shipping cost. We'll replace it with a new one. No money refunds will be given. No Returns for Change of Mind:  Since each product is made just for you, we don't accept returns if you change your mind. If You Damage the Product:  If you damage the product, we can try to fix it for an extra cost. Contact us to know the repair price. You'll pay for shipping to us and back."
     },
     {
       "question": "Contact Us",
       "answer": "Reach us on WhatsApp at +91-9414343709 or email mediaengrave@gmail.com for help!"
     }
+  ],
+  "reviews": [
+    { "user": "John Doe", "rating": 5, "comment": "Absolutely loved this piece!" },
+    { "user": "Jane Smith", "rating": 4, "comment": "Beautiful craftsmanship, would buy again." }
   ],
   "thicknessOptions": [
     {
@@ -67,12 +68,7 @@ export const products: Product[] = [
       "priceModifier": 17700
     }
   ],
-  "colorOptions": [
-    {
-      "value": "",
-      "priceModifier": 0
-    }
-  ]
+ 
 },
 
 {
@@ -90,16 +86,13 @@ export const products: Product[] = [
   ],
   "category": "geode-art",
   "featured" : true,
-  "note": "Since each piece is handmade, it won’t look exactly like the picture. There might be small differences—but it could turn out even better!",
-  "dimensions": "",
-  "materials": [
-    ""
-  ],
+  "note": "Since each piece is handmade, it won't look exactly like the picture. There might be small differences—but it could turn out even better!",
+ 
   "inStock": true,
   "faqs": [
     {
       "question": "Description",
-      "answer": "Red Gold Geode is a beautiful round artwork that catches your eye with its bright red color, like a shiny ruby. The red is mixed with swirls of gold, light brown, and a bit of white, making it look smooth and flowy, just like the inside of a real geode. There are small, shiny stones stuck into it—some are black, some are pinkish-brown, and others are yellowish-green. These stones are placed in neat, wavy lines, giving the art a bumpy texture and making it feel more real. Thin gold lines separate the different parts, adding a fancy touch and showing off all the little details. It’s placed on a soft white cloth, which makes the red and gold colors pop even more. Red Gold Geode is a lovely piece that brings the beauty of nature into your home in a simple, eye-catching way."
+      "answer": "Red Gold Geode is a beautiful round artwork that catches your eye with its bright red color, like a shiny ruby. The red is mixed with swirls of gold, light brown, and a bit of white, making it look smooth and flowy, just like the inside of a real geode. There are small, shiny stones stuck into it—some are black, some are pinkish-brown, and others are yellowish-green. These stones are placed in neat, wavy lines, giving the art a bumpy texture and making it feel more real. Thin gold lines separate the different parts, adding a fancy touch and showing off all the little details. It's placed on a soft white cloth, which makes the red and gold colors pop even more. Red Gold Geode is a lovely piece that brings the beauty of nature into your home in a simple, eye-catching way."
     },
     {
       "question": "Dimension, Timeline & Material",
@@ -107,12 +100,16 @@ export const products: Product[] = [
     },
     {
       "question": "Return & Refund Policy",
-      "answer": "Return and Refund Policy Overview:  All our products are handmade and made-to-order. We only accept returns if the product arrives damaged.  Returns for Damaged Products:  If your product arrives damaged, you must tell us within 2-3 days of delivery. Send us a message on WhatsApp at +91-9414343709 or email us at mediaengrave@gmail.com with details and pictures. We suggest making a video while unboxing the product to help us understand what went wrong (this is just advice, not required). Send the damaged product back to Khara Kuaa, 58, 100 Feet Rd, near Subha Aashiyana Complex, Shobhagpura, Udaipur, Rajasthan 313001 in its original box. We will cover the return shipping cost. We’ll replace it with a new one. No money refunds will be given. No Returns for Change of Mind:  Since each product is made just for you, we don’t accept returns if you change your mind. If You Damage the Product:  If you damage the product, we can try to fix it for an extra cost. Contact us to know the repair price. You’ll pay for shipping to us and back."
+      "answer": "Return and Refund Policy Overview:  All our products are handmade and made-to-order. We only accept returns if the product arrives damaged.  Returns for Damaged Products:  If your product arrives damaged, you must tell us within 2-3 days of delivery. Send us a message on WhatsApp at +91-9414343709 or email us at mediaengrave@gmail.com with details and pictures. We suggest making a video while unboxing the product to help us understand what went wrong (this is just advice, not required). Send the damaged product back to Khara Kuaa, 58, 100 Feet Rd, near Subha Aashiyana Complex, Shobhagpura, Udaipur, Rajasthan 313001 in its original box. We will cover the return shipping cost. We'll replace it with a new one. No money refunds will be given. No Returns for Change of Mind:  Since each product is made just for you, we don't accept returns if you change your mind. If You Damage the Product:  If you damage the product, we can try to fix it for an extra cost. Contact us to know the repair price. You'll pay for shipping to us and back."
     },
     {
       "question": "Contact Us",
       "answer": "Reach us on WhatsApp at +91-9414343709 or email mediaengrave@gmail.com for help!"
     }
+  ],
+  "reviews": [
+    { "user": "John Doe", "rating": 5, "comment": "Absolutely loved this piece!" },
+    { "user": "Jane Smith", "rating": 4, "comment": "Beautiful craftsmanship, would buy again." }
   ],
   "thicknessOptions": [
     {
@@ -140,7 +137,7 @@ export const products: Product[] = [
 {
   "id": "P3",
   "name": "Geode Art - Blue Om Serenity",
-  "description": "Elevate your space with this handcrafted geode resin art featuring the golden “ॐ” symbol. Vibrant, spiritual, and fully customizable for other religions too.",
+  "description": "Elevate your space with this handcrafted geode resin art featuring the golden \"ॐ\" symbol. Vibrant, spiritual, and fully customizable for other religions too.",
   "price": 2300,
   "images": [
     "https://i.pinimg.com/736x/56/75/5f/56755fd1df91e4514891dd6e8bbf2e88.jpg",
@@ -152,16 +149,12 @@ export const products: Product[] = [
   ],
   "category": "geode-art",
   "featured": true,
-  "note": "This artwork is not limited to the “ॐ” symbol. You can personalize it with any religious or spiritual symbol or mantra of your choice—be it Hanuman Chalisa, Shanti Mantra, Islamic calligraphy, Christian verses, or anything else that reflects your faith.",
-  "dimensions": "",
-  "materials": [
-    ""
-  ],
+  "note": "This artwork is not limited to the \"ॐ\" symbol. You can personalize it with any religious or spiritual symbol or mantra of your choice—be it Hanuman Chalisa, Shanti Mantra, Islamic calligraphy, Christian verses, or anything else that reflects your faith.",
   "inStock": true,
   "faqs": [
     {
       "question": "Description ",
-      "answer": "Transform your space with this stunning handmade geode resin art featuring the sacred “ॐ” symbol—a universal mark of peace, spirituality, and cosmic energy. Designed in a circular format, this piece brings together vibrant hues of blue, pink, and earthy tones, highlighted with glistening crystal textures that resemble real geodes.  Each layer is carefully poured using premium epoxy resin and hand-placed stones to create a mesmerizing 3D finish. The central golden “ॐ” radiates divine energy, making it a perfect centerpiece for your living room, meditation corner, or spiritual nook."
+      "answer": "Transform your space with this stunning handmade geode resin art featuring the sacred \"ॐ\" symbol—a universal mark of peace, spirituality, and cosmic energy. Designed in a circular format, this piece brings together vibrant hues of blue, pink, and earthy tones, highlighted with glistening crystal textures that resemble real geodes.  Each layer is carefully poured using premium epoxy resin and hand-placed stones to create a mesmerizing 3D finish. The central golden \"ॐ\" radiates divine energy, making it a perfect centerpiece for your living room, meditation corner, or spiritual nook."
     },
     {
       "question": "Dimension, Timeline & Material",
@@ -169,12 +162,16 @@ export const products: Product[] = [
     },
     {
       "question": "Return & Refund Policy",
-      "answer": "Return and Refund Policy Overview:  All our products are handmade and made-to-order. We only accept returns if the product arrives damaged.  Returns for Damaged Products:  If your product arrives damaged, you must tell us within 2-3 days of delivery. Send us a message on WhatsApp at +91-9414343709 or email us at mediaengrave@gmail.com with details and pictures. We suggest making a video while unboxing the product to help us understand what went wrong (this is just advice, not required). Send the damaged product back to Khara Kuaa, 58, 100 Feet Rd, near Subha Aashiyana Complex, Shobhagpura, Udaipur, Rajasthan 313001 in its original box. We will cover the return shipping cost. We’ll replace it with a new one. No money refunds will be given. No Returns for Change of Mind:  Since each product is made just for you, we don’t accept returns if you change your mind. If You Damage the Product:  If you damage the product, we can try to fix it for an extra cost. Contact us to know the repair price. You’ll pay for shipping to us and back."
+      "answer": "Return and Refund Policy Overview:  All our products are handmade and made-to-order. We only accept returns if the product arrives damaged.  Returns for Damaged Products:  If your product arrives damaged, you must tell us within 2-3 days of delivery. Send us a message on WhatsApp at +91-9414343709 or email us at mediaengrave@gmail.com with details and pictures. We suggest making a video while unboxing the product to help us understand what went wrong (this is just advice, not required). Send the damaged product back to Khara Kuaa, 58, 100 Feet Rd, near Subha Aashiyana Complex, Shobhagpura, Udaipur, Rajasthan 313001 in its original box. We will cover the return shipping cost. We'll replace it with a new one. No money refunds will be given. No Returns for Change of Mind:  Since each product is made just for you, we don't accept returns if you change your mind. If You Damage the Product:  If you damage the product, we can try to fix it for an extra cost. Contact us to know the repair price. You'll pay for shipping to us and back."
     },
     {
       "question": "Contact Us",
       "answer": "Reach us on WhatsApp at +91-9414343709 or email mediaengrave@gmail.com for help!"
     }
+  ],
+  "reviews": [
+    { "user": "John Doe", "rating": 5, "comment": "Absolutely loved this piece!" },
+    { "user": "Jane Smith", "rating": 4, "comment": "Beautiful craftsmanship, would buy again." }
   ],
   "thicknessOptions": [
     {
@@ -198,12 +195,7 @@ export const products: Product[] = [
       "priceModifier": 17700
     }
   ],
-  "colorOptions": [
-    {
-      "value": "",
-      "priceModifier": 0
-    }
-  ]
+ 
 },
 
 {
@@ -221,11 +213,8 @@ export const products: Product[] = [
   ],
   "category": "geode-art",
   "featured": true,
-  "note": "Since each piece is handmade, it won’t look exactly like the picture. There might be small differences—but it could turn out even better!",
+  "note": "Since each piece is handmade, it won't look exactly like the picture. There might be small differences—but it could turn out even better!",
   "dimensions": "18*24 Inches",
-  "materials": [
-    ""
-  ],
   "inStock": true,
   "faqs": [
     {
@@ -238,12 +227,16 @@ export const products: Product[] = [
     },
     {
       "question": "Return & Refund Policy",
-      "answer": "Return and Refund Policy Overview:  All our products are handmade and made-to-order. We only accept returns if the product arrives damaged.  Returns for Damaged Products:  If your product arrives damaged, you must tell us within 2-3 days of delivery. Send us a message on WhatsApp at +91-9414343709 or email us at mediaengrave@gmail.com with details and pictures. We suggest making a video while unboxing the product to help us understand what went wrong (this is just advice, not required). Send the damaged product back to Khara Kuaa, 58, 100 Feet Rd, near Subha Aashiyana Complex, Shobhagpura, Udaipur, Rajasthan 313001 in its original box. We will cover the return shipping cost. We’ll replace it with a new one. No money refunds will be given. No Returns for Change of Mind:  Since each product is made just for you, we don’t accept returns if you change your mind. If You Damage the Product:  If you damage the product, we can try to fix it for an extra cost. Contact us to know the repair price. You’ll pay for shipping to us and back."
+      "answer": "Return and Refund Policy Overview:  All our products are handmade and made-to-order. We only accept returns if the product arrives damaged.  Returns for Damaged Products:  If your product arrives damaged, you must tell us within 2-3 days of delivery. Send us a message on WhatsApp at +91-9414343709 or email us at mediaengrave@gmail.com with details and pictures. We suggest making a video while unboxing the product to help us understand what went wrong (this is just advice, not required). Send the damaged product back to Khara Kuaa, 58, 100 Feet Rd, near Subha Aashiyana Complex, Shobhagpura, Udaipur, Rajasthan 313001 in its original box. We will cover the return shipping cost. We'll replace it with a new one. No money refunds will be given. No Returns for Change of Mind:  Since each product is made just for you, we don't accept returns if you change your mind. If You Damage the Product:  If you damage the product, we can try to fix it for an extra cost. Contact us to know the repair price. You'll pay for shipping to us and back."
     },
     {
       "question": "Contact Us",
       "answer": "Reach us on WhatsApp at +91-9414343709 or email mediaengrave@gmail.com for help!"
     }
+  ],
+  "reviews": [
+    { "user": "John Doe", "rating": 5, "comment": "Absolutely loved this piece!" },
+    { "user": "Jane Smith", "rating": 4, "comment": "Beautiful craftsmanship, would buy again." }
   ],
   "thicknessOptions": [
     {
@@ -259,12 +252,7 @@ export const products: Product[] = [
       "priceModifier": 7200
     }
   ],
-  "colorOptions": [
-    {
-      "value": "",
-      "priceModifier": 0
-    }
-  ]
+ 
 },
 {
   "id": "P5",
@@ -281,13 +269,13 @@ export const products: Product[] = [
   ],
   "category": "geode-art",
   "featured": true,
-  "note": "Since each piece is handmade, it won’t look exactly like the picture. There might be small differences—but it could turn out even better!",
+  "note": "Since each piece is handmade, it won't look exactly like the picture. There might be small differences—but it could turn out even better!",
   "dimensions": "18*24 Inches",
   "inStock": true,
   "faqs": [
     {
       "question": "Description",
-      "answer": "Bring luxurious energy and artistic depth into your space with Geode Art – Majestic Plum Crystal Flow. This handcrafted resin geode masterpiece features stunning layers of deep plum, black, ivory, and hints of metallic gold. The artwork captures the raw beauty of natural geodes, brought to life with real crystal chips and textured resin that shimmer from every angle.  Each element is thoughtfully placed to create movement and depth, making it more than just wall art — it’s a conversation piece. Whether you're styling a cozy corner, enhancing your living room, or adding elegance to your office, this art piece elevates the ambiance with its bold presence and refined charm."
+      "answer": "Bring luxurious energy and artistic depth into your space with Geode Art – Majestic Plum Crystal Flow. This handcrafted resin geode masterpiece features stunning layers of deep plum, black, ivory, and hints of metallic gold. The artwork captures the raw beauty of natural geodes, brought to life with real crystal chips and textured resin that shimmer from every angle.  Each element is thoughtfully placed to create movement and depth, making it more than just wall art — it's a conversation piece. Whether you're styling a cozy corner, enhancing your living room, or adding elegance to your office, this art piece elevates the ambiance with its bold presence and refined charm."
     },
     {
       "question": "Dimension, Timeline & Material",
@@ -295,12 +283,16 @@ export const products: Product[] = [
     },
     {
       "question": "Return & Refund Policy",
-      "answer": "Return and Refund Policy Overview:  All our products are handmade and made-to-order. We only accept returns if the product arrives damaged.  Returns for Damaged Products:  If your product arrives damaged, you must tell us within 2-3 days of delivery. Send us a message on WhatsApp at +91-9414343709 or email us at mediaengrave@gmail.com with details and pictures. We suggest making a video while unboxing the product to help us understand what went wrong (this is just advice, not required). Send the damaged product back to Khara Kuaa, 58, 100 Feet Rd, near Subha Aashiyana Complex, Shobhagpura, Udaipur, Rajasthan 313001 in its original box. We will cover the return shipping cost. We’ll replace it with a new one. No money refunds will be given. No Returns for Change of Mind:  Since each product is made just for you, we don’t accept returns if you change your mind. If You Damage the Product:  If you damage the product, we can try to fix it for an extra cost. Contact us to know the repair price. You’ll pay for shipping to us and back."
+      "answer": "Return and Refund Policy Overview:  All our products are handmade and made-to-order. We only accept returns if the product arrives damaged.  Returns for Damaged Products:  If your product arrives damaged, you must tell us within 2-3 days of delivery. Send us a message on WhatsApp at +91-9414343709 or email us at mediaengrave@gmail.com with details and pictures. We suggest making a video while unboxing the product to help us understand what went wrong (this is just advice, not required). Send the damaged product back to Khara Kuaa, 58, 100 Feet Rd, near Subha Aashiyana Complex, Shobhagpura, Udaipur, Rajasthan 313001 in its original box. We will cover the return shipping cost. We'll replace it with a new one. No money refunds will be given. No Returns for Change of Mind:  Since each product is made just for you, we don't accept returns if you change your mind. If You Damage the Product:  If you damage the product, we can try to fix it for an extra cost. Contact us to know the repair price. You'll pay for shipping to us and back."
     },
     {
       "question": "Contact Us",
       "answer": "Reach us on WhatsApp at +91-9414343709 or email mediaengrave@gmail.com for help!"
     }
+  ],
+  "reviews": [
+    { "user": "John Doe", "rating": 5, "comment": "Absolutely loved this piece!" },
+    { "user": "Jane Smith", "rating": 4, "comment": "Beautiful craftsmanship, would buy again." }
   ],
   "thicknessOptions": [
     {
@@ -316,12 +308,7 @@ export const products: Product[] = [
       "priceModifier": 7200
     }
   ],
-  "colorOptions": [
-    {
-      "value": "",
-      "priceModifier": 0
-    }
-  ]
+ 
 },
 {
   "id": "P6",
@@ -345,16 +332,20 @@ export const products: Product[] = [
     },
     {
       "question": "Timeline",
-      "answer": "Your varmala preservation frame will be delivered in 12–14 business days.  We take around 7–8 days to carefully dry and preserve your real varmala flowers. After that, 1–2 more days are spent on the final touches, like polishing and detailing, to make your frame perfect.  Every piece is made with love and care, so we don’t rush the process. From flower preservation to the finishing shine, each frame has its own journey.  We promise — the wait will be worth it."
+      "answer": "Your varmala preservation frame will be delivered in 12–14 business days.  We take around 7–8 days to carefully dry and preserve your real varmala flowers. After that, 1–2 more days are spent on the final touches, like polishing and detailing, to make your frame perfect.  Every piece is made with love and care, so we don't rush the process. From flower preservation to the finishing shine, each frame has its own journey.  We promise — the wait will be worth it."
     },
     {
       "question": "Return & Refund Policy",
-      "answer": "Return and Refund Policy Overview:  All our products are handmade and made-to-order. We only accept returns if the product arrives damaged.  Returns for Damaged Products:  If your product arrives damaged, you must tell us within 2-3 days of delivery. Send us a message on WhatsApp at +91-9414343709 or email us at mediaengrave@gmail.com with details and pictures. We suggest making a video while unboxing the product to help us understand what went wrong (this is just advice, not required). Send the damaged product back to Khara Kuaa, 58, 100 Feet Rd, near Subha Aashiyana Complex, Shobhagpura, Udaipur, Rajasthan 313001 in its original box. We will cover the return shipping cost. We’ll replace it with a new one. No money refunds will be given. No Returns for Change of Mind:  Since each product is made just for you, we don’t accept returns if you change your mind. If You Damage the Product:  If you damage the product, we can try to fix it for an extra cost. Contact us to know the repair price. You’ll pay for shipping to us and back."
+      "answer": "Return and Refund Policy Overview:  All our products are handmade and made-to-order. We only accept returns if the product arrives damaged.  Returns for Damaged Products:  If your product arrives damaged, you must tell us within 2-3 days of delivery. Send us a message on WhatsApp at +91-9414343709 or email us at mediaengrave@gmail.com with details and pictures. We suggest making a video while unboxing the product to help us understand what went wrong (this is just advice, not required). Send the damaged product back to Khara Kuaa, 58, 100 Feet Rd, near Subha Aashiyana Complex, Shobhagpura, Udaipur, Rajasthan 313001 in its original box. We will cover the return shipping cost. We'll replace it with a new one. No money refunds will be given. No Returns for Change of Mind:  Since each product is made just for you, we don't accept returns if you change your mind. If You Damage the Product:  If you damage the product, we can try to fix it for an extra cost. Contact us to know the repair price. You'll pay for shipping to us and back."
     },
     {
       "question": "Contact us ",
       "answer": "Reach us on WhatsApp at +91-9414343709 or email mediaengrave@gmail.com for help!"
     }
+  ],
+  "reviews": [
+    { "user": "John Doe", "rating": 5, "comment": "Absolutely loved this piece!" },
+    { "user": "Jane Smith", "rating": 4, "comment": "Beautiful craftsmanship, would buy again." }
   ],
   "thicknessOptions": [
     {
@@ -407,6 +398,10 @@ export const products: Product[] = [
         question: "How should I care for this item?",
         answer: "Keep it away from direct sunlight and clean with a soft cloth."
       }
+    ],
+    reviews: [
+      { "user": "John Doe", "rating": 5, "comment": "Absolutely loved this piece!" },
+      { "user": "Jane Smith", "rating": 4, "comment": "Beautiful craftsmanship, would buy again." }
     ],
     thicknessOptions: [
       { value: "Thin (0.5 inch)", priceModifier: 0 },

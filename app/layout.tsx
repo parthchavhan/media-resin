@@ -22,6 +22,7 @@ export default function RootLayout({
   return (
     <html suppressHydrationWarning suppressContentEditableWarning lang="en">
       <body className={inter.className}>
+        <section className="bg-white">
         <ThemeProvider
           attribute="class"
           defaultTheme="light"
@@ -34,6 +35,7 @@ export default function RootLayout({
             <Footer />
           </CartProvider>
         </ThemeProvider>
+        </section>
       </body>
     </html>
   );

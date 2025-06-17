@@ -52,7 +52,7 @@ export default function CartItem({ item }: CartItemProps) {
           </div>
           <div className="mt-2 sm:mt-0 text-right">
             <p className="font-bold">₹{(product.price * quantity).toFixed(2)}</p>
-            <p className="text-sm text-gray-500">${product.price.toFixed(2)} each</p>
+            <p className="text-sm text-gray-500">₹{product.price.toFixed(2)} each</p>
           </div>
         </div>
         

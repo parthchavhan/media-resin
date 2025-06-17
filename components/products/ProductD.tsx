@@ -10,6 +10,8 @@ import Faq02 from "../kokonutui/faq-02";
 import { Input } from "../ui/input";
 import { Button } from "../ui/button";
 import { Switch } from "../ui/switch";
+import ProductReviews from "./ProductReviews";
+import RelevantProducts from "./RelevantProducts";
 
 interface ProductDetailProps {
   product: Product;
@@ -308,6 +310,8 @@ export default function ProductD({ product }: ProductDetailProps) {
 
       <div className="container mx-auto px-4 mt-8">
         <Faq02 faqs={product.faqs || []} />
+        <ProductReviews reviews={product.reviews || []} />
+        <RelevantProducts currentCategory={product.category} currentProductId={product.id} />
       </div>
     </>
   );

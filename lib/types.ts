@@ -9,7 +9,8 @@ export interface Product {
   dimensions?: string;
   materials?: string[];
   inStock: boolean;
-  faqs?: FAQ[]; 
+  faqs?: FAQ[];
+  reviews?: Review[];
   note: string;
   quantity?: number;
   thicknessOptions?: {
@@ -21,9 +22,16 @@ export interface Product {
     priceModifier: number;
   }[];
 }
+
 export interface FAQ {
   question: string;
   answer: string;
+}
+
+export interface Review {
+  user: string;
+  rating: number;
+  comment: string;
 }
 
 export interface Category {

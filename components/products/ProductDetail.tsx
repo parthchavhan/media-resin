@@ -7,6 +7,9 @@ import { useCart } from "@/context/CartContext";
 import { Product } from "@/lib/types";
 import { cn } from "@/lib/utils";
 import Faq02 from "../kokonutui/faq-02";
+import ProductReviews from "./ProductReviews";
+import RelevantProducts from "./RelevantProducts";
+import Customeralsoliked from "./Customeralsoliked";
 
 interface ProductDetailProps {
   product: Product;
@@ -200,8 +203,14 @@ export default function ProductDetail({ product }: ProductDetailProps) {
 
     <div className="container mx-auto px-4">
       <Faq02 faqs={product.faqs || []} />
-    </div>
+      <RelevantProducts currentCategory={product.category} currentProductId={product.id} />
+      
+      <ProductReviews reviews={product.reviews || []} />
+      <Customeralsoliked currentCategory={product.category} currentProductId={product.id} />
+       
      
+    </div>
+   
     </>
   );
 }
